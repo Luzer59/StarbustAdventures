@@ -1,0 +1,110 @@
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 660   (ID=0x11c0)
+    Vendor:   NVIDIA
+    VRAM:     1989 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.058 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1216 at 0,-136
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: E:\Unity\Projects\Spaceshooter\Builds\v.0.12\SpaceShooter_v.0.12_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2384 -> priority: 1 
+  Thread -> id: 222c -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.330918 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2554.
+Total: 0.717950 ms (FindLiveObjects: 0.092358 ms CreateObjectMapping: 0.040056 ms MarkObjects: 0.568441 ms  DeleteObjects: 0.016583 ms)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+asd
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
