@@ -7,7 +7,7 @@ public class DeathExplosionEffect : MonoBehaviour
     private int explosionPoolIndex = 0;
 
     GameObject instance;
-    public PoolManager poolManager;
+    private PoolManager poolManager;
 
     void Awake()
     {
@@ -24,7 +24,6 @@ public class DeathExplosionEffect : MonoBehaviour
                 break;
             }
         }
-        Debug.Log(instance, this);
         instance.SetActive(true);
         instance.transform.SetParent(null, true);
         instance.transform.position = transform.position;

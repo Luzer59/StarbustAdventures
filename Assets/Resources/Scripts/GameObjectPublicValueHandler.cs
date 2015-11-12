@@ -5,6 +5,15 @@ public class GameObjectPublicValueHandler : MonoBehaviour
 {
     public bool canBeHit = false;
     public int health = 1;
+    public int scoreValue = 1;
+
+    [HideInInspector]
+    public GameObject gameController;
+
+    void Awake()
+    {
+        gameController = GameObject.FindGameObjectWithTag("GameController");
+    }
 
     public void CheckHealth()
     {
@@ -13,11 +22,19 @@ public class GameObjectPublicValueHandler : MonoBehaviour
             if (GetComponent<DeathExplosionEffect>())
             {
                 GetComponent<DeathExplosionEffect>().Effect();
+                if (tag == "Enemy")
+                {
+                    gameController.GetComponent<PlayerController>().AddScore(scoreValue);
+                }
             }
 
             if (tag == "Player")
             {
                 Application.LoadLevel(Application.loadedLevel);
+            }
+            else if (tag == "Enemy")
+            {
+                gameController.GetComponent<PlayerController>().AddMultiplier();
             }
 
             gameObject.SetActive(false);

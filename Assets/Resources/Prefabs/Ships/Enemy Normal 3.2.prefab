@@ -41,6 +41,8 @@ GameObject:
   - 4: {fileID: 471030}
   - 114: {fileID: 11461374}
   - 114: {fileID: 11400742}
+  - 114: {fileID: 11445206}
+  - 114: {fileID: 11406242}
   m_Layer: 0
   m_Name: Enemy Normal 3.2
   m_TagString: Enemy
@@ -141,6 +143,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeHit: 1
   health: 1
+--- !u!114 &11406242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745a94a6f292c2443939c54d3d7a7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPoolIndex: 0
+--- !u!114 &11445206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86df8471b2dd16a46b20290a8b788131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11461374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,20 +179,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 0
   paths:
-  - path: []
-    pathName: normal3_2
+  - pathName: normal3_2
+    path: []
     speed: 13
     easeType: linear
     loopType: none
     aim: 1
     shoot: 1
+    disableAimingWhenShooting: 0
+    disableTime: 0
     shootValues:
     - shootPos: {fileID: 146286}
       projectileIndex: 0
       active: 1
       shootTiming:
       - .5
-      shootType: normal
+      shootType: 0
       shotsFired: 0
       infShoot: 0
       timer: 0

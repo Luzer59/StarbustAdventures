@@ -87,7 +87,7 @@ public class PoolManager : MonoBehaviour
             effectParent[p] = new GameObject(pooledEffects[p].name + "Parent");
             effectParent[p].transform.SetParent(transform);
             effectParent[p].transform.position = transform.position;
-            for (int i = 0; i < projectilePoolBuffer[p]; i++)
+            for (int i = 0; i < effectPoolBuffer[p]; i++)
             {
                 instance = (GameObject)Instantiate(pooledEffects[p], Vector3.zero, Quaternion.identity);
                 effectPool[p].Add(instance);

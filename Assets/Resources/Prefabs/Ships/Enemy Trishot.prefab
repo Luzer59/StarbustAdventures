@@ -88,6 +88,7 @@ GameObject:
   - 114: {fileID: 11466124}
   - 114: {fileID: 11461206}
   - 114: {fileID: 11405710}
+  - 114: {fileID: 11413776}
   m_Layer: 0
   m_Name: Enemy Trishot
   m_TagString: Enemy
@@ -206,6 +207,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86df8471b2dd16a46b20290a8b788131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11413776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745a94a6f292c2443939c54d3d7a7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPoolIndex: 0
 --- !u!114 &11461206
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -59,7 +59,8 @@ GameObject:
   - 114: {fileID: 11405240}
   - 114: {fileID: 11488890}
   - 114: {fileID: 11434664}
-  - 114: {fileID: 11460854}
+  - 114: {fileID: 11463254}
+  - 114: {fileID: 11400250}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -147,6 +148,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: .850000024, y: .850000024}
+--- !u!114 &11400250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745a94a6f292c2443939c54d3d7a7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPoolIndex: 0
 --- !u!114 &11405240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,8 +189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHit: 1
-  health: 1
---- !u!114 &11460854
+  health: 1000
+--- !u!114 &11463254
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -185,7 +198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 160156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d10711f6153c404fa37f9457e14beb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 86df8471b2dd16a46b20290a8b788131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11488890

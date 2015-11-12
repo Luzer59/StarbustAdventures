@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 482232}
   - 114: {fileID: 11468188}
   - 114: {fileID: 11438950}
+  - 114: {fileID: 11498460}
+  - 114: {fileID: 11496826}
   m_Layer: 0
   m_Name: Enemy Normal Straight 1
   m_TagString: Enemy
@@ -179,6 +181,29 @@ MonoBehaviour:
   shotSpawner: {fileID: 199514, guid: 46ca68e80573ce74498ab26f54f2a015, type: 2}
   useSameShootValues: 0
   shootValues: []
+--- !u!114 &11496826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745a94a6f292c2443939c54d3d7a7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPoolIndex: 0
+--- !u!114 &11498460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86df8471b2dd16a46b20290a8b788131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21242744
 SpriteRenderer:
   m_ObjectHideFlags: 1

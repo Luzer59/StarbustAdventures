@@ -41,6 +41,8 @@ GameObject:
   - 4: {fileID: 425144}
   - 114: {fileID: 11415540}
   - 114: {fileID: 11410944}
+  - 114: {fileID: 11494972}
+  - 114: {fileID: 11447664}
   m_Layer: 0
   m_Name: Enemy Normal 3.1
   m_TagString: Enemy
@@ -154,20 +156,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 0
   paths:
-  - path: []
-    pathName: normal3_1
+  - pathName: normal3_1
+    path: []
     speed: 13
     easeType: linear
     loopType: none
     aim: 1
     shoot: 1
+    disableAimingWhenShooting: 0
+    disableTime: 0
     shootValues:
     - shootPos: {fileID: 110608}
       projectileIndex: 0
       active: 1
       shootTiming:
       - .5
-      shootType: normal
+      shootType: 0
       shotsFired: 0
       infShoot: 0
       timer: 0
@@ -177,6 +181,29 @@ MonoBehaviour:
   shotSpawner: {fileID: 199514, guid: 46ca68e80573ce74498ab26f54f2a015, type: 2}
   useSameShootValues: 0
   shootValues: []
+--- !u!114 &11447664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745a94a6f292c2443939c54d3d7a7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPoolIndex: 0
+--- !u!114 &11494972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86df8471b2dd16a46b20290a8b788131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21277630
 SpriteRenderer:
   m_ObjectHideFlags: 1

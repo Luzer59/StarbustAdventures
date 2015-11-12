@@ -57,6 +57,7 @@ GameObject:
   - 114: {fileID: 11449516}
   - 114: {fileID: 11490238}
   - 114: {fileID: 11420920}
+  - 114: {fileID: 11474786}
   m_Layer: 0
   m_Name: Enemy Boss 1
   m_TagString: Enemy
@@ -284,6 +285,8 @@ MonoBehaviour:
     loopType: none
     aim: 0
     shoot: 0
+    disableAimingWhenShooting: 0
+    disableTime: 0
     shootValues: []
     endWait: 0
     endWaitTime: 0
@@ -294,6 +297,8 @@ MonoBehaviour:
     loopType: none
     aim: 0
     shoot: 0
+    disableAimingWhenShooting: 0
+    disableTime: 0
     shootValues: []
     endWait: 0
     endWaitTime: 0
@@ -304,6 +309,8 @@ MonoBehaviour:
     loopType: pingPong
     aim: 0
     shoot: 0
+    disableAimingWhenShooting: 0
+    disableTime: 0
     shootValues: []
     endWait: 0
     endWaitTime: 0
@@ -351,6 +358,18 @@ MonoBehaviour:
     shotsFired: 0
     infShoot: 0
     timer: 0
+--- !u!114 &11474786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745a94a6f292c2443939c54d3d7a7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPoolIndex: 0
 --- !u!114 &11490238
 MonoBehaviour:
   m_ObjectHideFlags: 1

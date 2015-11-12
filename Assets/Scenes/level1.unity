@@ -7377,8 +7377,8 @@ GameObject:
   - 4: {fileID: 1224667932}
   - 114: {fileID: 1224667931}
   m_Layer: 0
-  m_Name: ProjectilePoolController
-  m_TagString: Untagged
+  m_Name: PoolController
+  m_TagString: PoolController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7396,10 +7396,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotSpawnerPool: []
   shotSpawner: {fileID: 199514, guid: 46ca68e80573ce74498ab26f54f2a015, type: 2}
-  pooledObjects:
+  pooledProjectiles:
   - {fileID: 166272, guid: 108d02a02dd0dcf4bb1daf4eb29fe51b, type: 2}
   - {fileID: 171838, guid: afa409ea8d79dbf43a4d0adf1ea24621, type: 2}
-  poolBuffer: 2c01000064000000
+  - {fileID: 146252, guid: 5ee368b627c3de84894184a50a4e42c7, type: 2}
+  projectilePoolBuffer: c80000006400000032000000
+  pooledEffects:
+  - {fileID: 149312, guid: 62d0672a82a26d3428842b91945648e4, type: 2}
+  effectPoolBuffer: 14000000
 --- !u!4 &1224667932
 Transform:
   m_ObjectHideFlags: 0
@@ -12431,7 +12435,8 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11460854, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2068802680 stripped

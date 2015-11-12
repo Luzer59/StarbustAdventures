@@ -4,29 +4,33 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     public int score = 0;
-    public int scoreMultiplier = 1;
+    public float scoreMultiplier = 1.0f;
     public int lives = 3;
     public int bombs = 3;
 
     private float timer = 0;
-    private float timerMax = 0.7f;
+    private float timerMax = 3f;
+
+    public void AddMultiplier()
+    {
+        scoreMultiplier += 0.05f;
+        timer = 0f;
+    }
 
 	public void AddScore(int scoreValue)
     {
-        score += scoreMultiplier * scoreValue;
-        timer = 0;
-        scoreMultiplier++;   
+        score += (int)(scoreMultiplier * scoreValue);
     }
 
     void Update()
     {
-        if (scoreMultiplier > 1)
+        if (scoreMultiplier > 1f)
         {
             timer += Time.deltaTime;
 
             if (timer > timerMax)
             {
-                scoreMultiplier--;
+                scoreMultiplier = 1f;
                 timer = 0;
             }
         }

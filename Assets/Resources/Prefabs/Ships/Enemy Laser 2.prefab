@@ -27,6 +27,7 @@ GameObject:
   - 114: {fileID: 11400198}
   - 114: {fileID: 11436108}
   - 114: {fileID: 11494574}
+  - 114: {fileID: 11456752}
   m_Layer: 0
   m_Name: Enemy Laser 2
   m_TagString: Enemy
@@ -192,6 +193,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeHit: 1
   health: 3
+--- !u!114 &11456752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745a94a6f292c2443939c54d3d7a7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPoolIndex: 0
 --- !u!114 &11494574
 MonoBehaviour:
   m_ObjectHideFlags: 1

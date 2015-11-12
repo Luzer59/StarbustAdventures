@@ -57,6 +57,8 @@ GameObject:
   - 4: {fileID: 496414}
   - 114: {fileID: 11419272}
   - 114: {fileID: 11448072}
+  - 114: {fileID: 11407356}
+  - 114: {fileID: 11429628}
   m_Layer: 0
   m_Name: Enemy Normal 2.2
   m_TagString: Enemy
@@ -128,6 +130,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: .870000005, y: .75999999}
+--- !u!114 &11407356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86df8471b2dd16a46b20290a8b788131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11419272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,20 +154,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 0
   paths:
-  - path: []
-    pathName: normal2_2
+  - pathName: normal2_2
+    path: []
     speed: 13
     easeType: linear
     loopType: none
     aim: 1
     shoot: 1
+    disableAimingWhenShooting: 0
+    disableTime: 0
     shootValues:
     - shootPos: {fileID: 159048}
       projectileIndex: 0
       active: 1
       shootTiming:
       - .5
-      shootType: normal
+      shootType: 0
       shotsFired: 0
       infShoot: 0
       timer: 0
@@ -164,6 +179,18 @@ MonoBehaviour:
   shotSpawner: {fileID: 199514, guid: 46ca68e80573ce74498ab26f54f2a015, type: 2}
   useSameShootValues: 0
   shootValues: []
+--- !u!114 &11429628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745a94a6f292c2443939c54d3d7a7e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPoolIndex: 0
 --- !u!114 &11448072
 MonoBehaviour:
   m_ObjectHideFlags: 1
