@@ -95,8 +95,8 @@ public class PoolManager : MonoBehaviour
                 instance.transform.SetParent(effectParent[p].transform);
                 instance.transform.position = effectParent[p].transform.position;
                 instance.GetComponent<PoolIndex>().container = effectParent[p].transform;
-                gameObject.SetActive(false);
+                instance.SetActive(false);
             }
         }
-    }  
+    }
 }

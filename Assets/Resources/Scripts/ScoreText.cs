@@ -9,6 +9,6 @@ public class ScoreText : MonoBehaviour
 
 	void Update ()
     {
-        GetComponent<Text>().text = "Score: " + gameController.GetComponent<PlayerController>().score;
+        GetComponent<Text>().text = gameController.GetComponent<PlayerController>().score.ToString();
 	}
 }
