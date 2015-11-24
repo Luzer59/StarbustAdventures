@@ -3691,6 +3691,10 @@ Prefab:
       propertyPath: paths.Array.data[0].shootTiming.Array.data[0]
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11466124, guid: 9997414a08b6ee548964e40654f67486, type: 2}
+      propertyPath: startTime
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9997414a08b6ee548964e40654f67486, type: 2}
   m_IsPrefabParent: 0
@@ -7706,7 +7710,7 @@ Transform:
   m_LocalScale: {x: 18, y: 18, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &1252240658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9171,7 +9175,7 @@ RectTransform:
   - {fileID: 949415290}
   - {fileID: 534623873}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -9663,7 +9667,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1001 &1558742452
 Prefab:
   m_ObjectHideFlags: 0
@@ -11675,7 +11679,7 @@ Transform:
   - {fileID: 232102319}
   - {fileID: 1153295810}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &1928591768
 GameObject:
   m_ObjectHideFlags: 0
@@ -12495,7 +12499,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443152, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11434664, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
       propertyPath: health
@@ -12512,6 +12516,10 @@ Prefab:
     - target: {fileID: 21284540, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488890, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
+      propertyPath: rateOfFire
+      value: .400000006
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11460854, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}

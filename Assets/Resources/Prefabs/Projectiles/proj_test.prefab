@@ -74,6 +74,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHit: 0
+  health: 1
+  scoreValue: 1
+  gameController: {fileID: 0}
 --- !u!114 &11480554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolIndex: 0
+  container: {fileID: 0}
 --- !u!114 &11491544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  weaponType: 0
 --- !u!212 &21284478
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -122,7 +127,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7cc426bc6448b11478f1e61dd0231cfe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8b6e4774f0c77c439d2b06e1ee66796, type: 3}
   m_Color: {r: .92190671, g: 1, b: .897058845, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -155,6 +160,11 @@ Prefab:
       propertyPath: canBeHit
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8b6e4774f0c77c439d2b06e1ee66796,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 166272}
