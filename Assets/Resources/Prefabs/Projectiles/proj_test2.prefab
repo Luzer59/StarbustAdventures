@@ -88,6 +88,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeHit: 0
   health: 1
+  scoreValue: 1
+  gameController: {fileID: 0}
 --- !u!114 &11490110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,8 +127,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7cc426bc6448b11478f1e61dd0231cfe, type: 3}
-  m_Color: {r: .970588207, g: .970588207, b: .970588207, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a8b6e4774f0c77c439d2b06e1ee66796, type: 3}
+  m_Color: {r: .918383121, g: .5448277, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -136,20 +138,25 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Color.r
-      value: .970588207
+      value: .918383121
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Color.g
-      value: .970588207
+      value: .5448277
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Color.b
-      value: .970588207
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8b6e4774f0c77c439d2b06e1ee66796,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 171838}
