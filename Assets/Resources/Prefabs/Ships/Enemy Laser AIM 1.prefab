@@ -216,6 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeHit: 1
   health: 3
+  scoreValue: 100
+  gameController: {fileID: 0}
 --- !u!212 &21254728
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -268,6 +270,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: paths.Array.data[0].aim
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scoreValue
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

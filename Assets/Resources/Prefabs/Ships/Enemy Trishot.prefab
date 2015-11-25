@@ -586,7 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeHit: 1
   health: 20
-  scoreValue: 1
+  scoreValue: 300
   gameController: {fileID: 0}
 --- !u!114 &11466124
 MonoBehaviour:
@@ -10540,6 +10540,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: health
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scoreValue
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -9,17 +9,22 @@ public class PlayerDeath : MonoBehaviour
 
     public float fadeSpeed = 1f;
 
-    public IEnumerator EndGame()
+    public void EndGameStart()
+    {
+        StartCoroutine(EndGame());
+    }
+
+    IEnumerator EndGame()
     {
         Image image = tex.GetComponent<Image>();
-        /*yield return new WaitForSeconds(1f);
-        for (float i = 0f; i <= 255f; i += fadeSpeed * Time.deltaTime)
+        yield return new WaitForSeconds(1f);
+        for (float i = 0f; i <= 1f; i += fadeSpeed * Time.deltaTime)
         {
-            print(image.color.a);
-            image.color = new Color(255f,255f,255f,i);
+            print(i);
+            image.color = new Color(1f, 1f, 1f, i);
             yield return null;
         }
         yield return new WaitForSeconds(3f);
-        Application.LoadLevel(Application.loadedLevel);*/
+        Application.LoadLevel(0);
     }
 }

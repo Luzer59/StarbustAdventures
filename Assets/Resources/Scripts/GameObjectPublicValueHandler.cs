@@ -30,7 +30,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
 
             if (tag == "Player")
             {
-                StartCoroutine(gameController.GetComponent<PlayerDeath>().EndGame());
+                gameController.GetComponent<PlayerDeath>().EndGameStart();
             }
             else if (tag == "Enemy")
             {
