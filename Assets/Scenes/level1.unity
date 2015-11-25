@@ -8556,8 +8556,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb09d11687de42499d30c76e9687d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   tex: {fileID: 750081688}
   fadeSpeed: .5
+=======
+  tex: {fileID: 0}
+  fadeSpeed: 1
+>>>>>>> 49894c4d154f1c4b0ed6c2de610769ed0e08348d
 --- !u!1001 &1436943098
 Prefab:
   m_ObjectHideFlags: 0
