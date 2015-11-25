@@ -12,7 +12,7 @@ public class PlayerDeath : MonoBehaviour
     public IEnumerator EndGame()
     {
         Image image = tex.GetComponent<Image>();
-        /*yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f);
         for (float i = 0f; i <= 255f; i += fadeSpeed * Time.deltaTime)
         {
             print(image.color.a);
@@ -20,6 +20,6 @@ public class PlayerDeath : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(3f);
-        Application.LoadLevel(Application.loadedLevel);*/
+        Application.LoadLevel(Application.loadedLevel);
     }
 }
