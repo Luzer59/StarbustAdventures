@@ -19,22 +19,32 @@ public class MenuController : MonoBehaviour
                 PlayerPrefs.SetInt("Score", GetComponent<PlayerController>().score);
             }
         }
-        Application.LoadLevel(index);
+
+        if (index == -1)
+        {
+            Application.Quit();
+        }
+        else
+        {
+            Application.LoadLevel(index);
+        }
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!GetComponent<PlayerController>())
         {
-            if (returnScene == -1)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
+                if (returnScene == -1)
+                {
                     Application.Quit();
+                }
+                else
+                {
+                    ChangeLevel(returnScene);
+                }
             }
-            else
-            {
-                ChangeLevel(returnScene);
-            }
-            
         }
     }
 }

@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHit: 1
-  health: 1
+  health: 10
   scoreValue: 1
   gameController: {fileID: 0}
 --- !u!114 &11463254

@@ -30,7 +30,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
 
             if (tag == "Player")
             {
-                gameController.GetComponent<PlayerDeath>().EndGameStart(true);
+                gameController.GetComponent<PlayerDeath>().EndGameStart(false);
             }
             else if (tag == "Enemy")
             {
@@ -38,7 +38,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
             }
             if (GetComponent<AiBoss1>())
             {
-                gameController.GetComponent<PlayerWin>().EndGameStart();
+                gameController.GetComponent<PlayerDeath>().EndGameStart(true);
             }
 
             gameObject.SetActive(false);
