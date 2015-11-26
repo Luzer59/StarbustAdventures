@@ -74,19 +74,18 @@ public class ProjectileBasic : MonoBehaviour
 
     IEnumerator BeamController()
     {
-        spriteRenderer.transform.localScale = new Vector3(0.05f, 20f, 1f);
-        spriteRenderer.color = new Color(255f, 255f, 255f, 0.5f);
+        spriteRenderer.color = new Color(255f, 255f, 255f, 0.3f);
         yield return new WaitForSeconds(0.2f);
         spriteRenderer.color = new Color(255f, 255f, 255f, 0f);
         yield return new WaitForSeconds(0.2f);
-        spriteRenderer.color = new Color(255f, 255f, 255f, 0.5f);
+        spriteRenderer.color = new Color(255f, 255f, 255f, 0.3f);
         yield return new WaitForSeconds(0.2f);
         spriteRenderer.color = new Color(255f, 255f, 255f, 0f);
         yield return new WaitForSeconds(0.2f);
-        spriteRenderer.color = new Color(255f, 255f, 255f, 0.5f);
+        spriteRenderer.color = new Color(255f, 255f, 255f, 0.3f);
         yield return new WaitForSeconds(0.2f);
-        spriteRenderer.transform.localScale = new Vector3(0.4f, 20f, 1f);
-        spriteRenderer.color = new Color(255f, 0f, 0f, 1f);
+        spriteRenderer.color = new Color(255f, 255f, 255f, 1f);
+        GetComponentInChildren<ParticleSystem>().Play();
         GetComponent<BoxCollider2D>().enabled = true;
         yield return new WaitForSeconds(2f);
         GetComponent<BoxCollider2D>().enabled = false;
