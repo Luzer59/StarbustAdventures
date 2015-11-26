@@ -2,33 +2,21 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class PlayerDeath : MonoBehaviour
+public class PlayerWin : MonoBehaviour
 {
     [SerializeField]
     private GameObject tex;
-    [SerializeField]
-    private Sprite lose;
 
     public float fadeSpeed = 1f;
-    private bool win = false;
 
-    public void EndGameStart(bool _win)
+    public void EndGameStart()
     {
-        win = _win;
         StartCoroutine(EndGame());
     }
 
     IEnumerator EndGame()
     {
         Image image = tex.GetComponent<Image>();
-        if (win)
-        {
-            //image.sprite =
-        }
-        else
-        {
-            image = tex.GetComponent<Image>();
-        }
         yield return new WaitForSeconds(1f);
         for (float i = 0f; i <= 1f; i += fadeSpeed * Time.deltaTime)
         {

@@ -8,6 +8,17 @@ public class MenuController : MonoBehaviour
 
     public void ChangeLevel(int index)
     {
+        if (GetComponent<PlayerController>())
+        {
+            if (!PlayerPrefs.HasKey("Score"))
+            {
+                PlayerPrefs.SetInt("Score", 0);
+            }
+            if (GetComponent<PlayerController>().score > PlayerPrefs.GetInt("Score"))
+            {
+                PlayerPrefs.SetInt("Score", GetComponent<PlayerController>().score);
+            }
+        }
         Application.LoadLevel(index);
     }
 

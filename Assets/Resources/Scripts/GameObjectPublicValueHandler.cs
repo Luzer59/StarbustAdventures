@@ -30,11 +30,15 @@ public class GameObjectPublicValueHandler : MonoBehaviour
 
             if (tag == "Player")
             {
-                gameController.GetComponent<PlayerDeath>().EndGameStart();
+                gameController.GetComponent<PlayerDeath>().EndGameStart(true);
             }
             else if (tag == "Enemy")
             {
                 gameController.GetComponent<PlayerController>().AddMultiplier();
+            }
+            if (GetComponent<AiBoss1>())
+            {
+                gameController.GetComponent<PlayerWin>().EndGameStart();
             }
 
             gameObject.SetActive(false);
