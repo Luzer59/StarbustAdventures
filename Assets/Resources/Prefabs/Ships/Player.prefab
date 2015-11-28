@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 421338}
-  - 61: {fileID: 6139936}
+  - 60: {fileID: 6081056}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -257,19 +257,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6139936
-BoxCollider2D:
+--- !u!60 &6081056
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131042}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: .850000024, y: .850000024}
+  m_Points:
+    m_Paths:
+    - - {x: .0768883526, y: .502894044}
+      - {x: .513917208, y: -.372714996}
+      - {x: -.512993455, y: -.378061533}
+      - {x: -.0660220981, y: .501415849}
 --- !u!114 &11400250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -344,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHit: 1
-  health: 10
+  health: 3
   scoreValue: 1
   gameController: {fileID: 0}
 --- !u!114 &11463254
