@@ -10,6 +10,8 @@ public class GameObjectPublicValueHandler : MonoBehaviour
     [HideInInspector]
     public GameObject gameController;
 
+    private bool invincible = false;
+
     void Awake()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController");
@@ -17,39 +19,65 @@ public class GameObjectPublicValueHandler : MonoBehaviour
 
     public void CheckHealth()
     {
-        if (health <= 0)
+        if (!invincible)
         {
-            if (GetComponent<DeathExplosionEffect>())
+            health--;
+
+            if (health <= 0)
             {
-                GetComponent<DeathExplosionEffect>().Effect();
-                if (tag == "Enemy")
+                if (GetComponent<DeathExplosionEffect>())
                 {
-                    gameController.GetComponent<PlayerController>().AddScore(scoreValue);
+                    GetComponent<DeathExplosionEffect>().Effect();
+                    if (tag == "Enemy")
+                    {
+                        gameController.GetComponent<PlayerController>().AddScore(scoreValue);
+                    }
+                }
+
+                if (tag == "Player")
+                {
+                    gameController.GetComponent<PlayerController>().lives--;
+
+                    if (gameController.GetComponent<PlayerController>().lives > 0)
+                    {
+                        gameController.GetComponent<PlayerDeath>().PlayerRespawn();
+                    }
+                    else
+                    {
+                        gameController.GetComponent<PlayerDeath>().EndGameStart(false);
+                    }
+                }
+                else if (tag == "Enemy")
+                {
+                    gameController.GetComponent<PlayerController>().AddMultiplier();
+                }
+                if (GetComponent<AiBoss1>())
+                {
+                    gameController.GetComponent<PlayerDeath>().EndGameStart(true);
+                }
+
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                if (GetComponent<HitEffect>())
+                {
+                    StartCoroutine(GetComponent<HitEffect>().Effect());
+
                 }
             }
-
-            if (tag == "Player")
-            {
-                gameController.GetComponent<PlayerDeath>().EndGameStart(false);
-            }
-            else if (tag == "Enemy")
-            {
-                gameController.GetComponent<PlayerController>().AddMultiplier();
-            }
-            if (GetComponent<AiBoss1>())
-            {
-                gameController.GetComponent<PlayerDeath>().EndGameStart(true);
-            }
-
-            gameObject.SetActive(false);
         }
-        else
-        {
-            if (GetComponent<HitEffect>())
-            {
-                StartCoroutine(GetComponent<HitEffect>().Effect());
-                
-            }
-        }
+    }
+
+    public void StartInvincibility()
+    {
+        StartCoroutine(InvincibilityTimer());
+    }
+
+    IEnumerator InvincibilityTimer()
+    {
+        invincible = true;
+        yield return new WaitForSeconds(2f);
+        invincible = false;
     }
 }

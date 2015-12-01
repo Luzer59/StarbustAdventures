@@ -101,7 +101,6 @@ public class ProjectileBasic : MonoBehaviour
         {
             if (valueHandler.canBeHit == true)
             {
-                valueHandler.health--;
                 valueHandler.CheckHealth();
 
                 if (weaponType == WeaponType.Projectile)

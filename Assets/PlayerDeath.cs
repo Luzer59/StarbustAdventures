@@ -13,6 +13,36 @@ public class PlayerDeath : MonoBehaviour
 
     public float fadeSpeed = 1f;
     private bool win = false;
+    private GameObject player;
+    private int respawnHealth;
+    private Vector3 respawnPosition;
+
+    void Awake()
+    {
+        player = GameObject.Find("Player");
+    }
+
+    void Start()
+    {
+        print("derp");
+        respawnHealth = player.GetComponent<GameObjectPublicValueHandler>().health;
+        respawnPosition = player.transform.position;
+    }
+
+    public void PlayerRespawn()
+    {
+        StartCoroutine(RespawnTimer());
+    }
+
+    IEnumerator RespawnTimer()
+    {
+        yield return new WaitForSeconds(2f);
+        print(player);
+        player.SetActive(true);
+        player.GetComponent<GameObjectPublicValueHandler>().health = respawnHealth;
+        player.transform.position = respawnPosition;
+        player.GetComponent<GameObjectPublicValueHandler>().StartInvincibility();
+    }
 
     public void EndGameStart(bool _win)
     {

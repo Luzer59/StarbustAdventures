@@ -12,13 +12,19 @@ public abstract class AiBase : MonoBehaviour
     protected float zPlane;
     protected int pathNumber = 0;
 
-    protected GameObject ship; // Ai object
-    protected GameObject player; // Player
-    protected GameObject gameController; // Game Controller
+    // Ai object
+    protected GameObject ship;
+    // Player
+    protected GameObject player;
+    // Game Controller
+    protected GameObject gameController;
+    // ShotSpawner prefab
     [SerializeField]
-    protected GameObject shotSpawner; // ShotSpawner prefab
-    protected GameObject projectileSpawner; // ShotSpawner instance
-    protected GameObjectPublicValueHandler valueHandler; // Interaction value class
+    protected GameObject shotSpawner;
+    // ShotSpawner instance
+    protected GameObject projectileSpawner;
+    // Interaction value class
+    protected GameObjectPublicValueHandler valueHandler; 
     protected PoolManager poolManager;
     [SerializeField]
     protected bool useSameShootValues = false;
@@ -36,16 +42,19 @@ public abstract class AiBase : MonoBehaviour
     #endregion
     void Start()
     {
-        startTime += transform.parent.GetComponent<SequenceStart>().sequenceStartTime + transform.parent.parent.GetComponent<WaveStart>().waveStartTime; // Set start time      
+        // Set start time     
+        startTime += transform.parent.GetComponent<SequenceStart>().sequenceStartTime + transform.parent.parent.GetComponent<WaveStart>().waveStartTime;
 
-        InitializeReferences(); // Get and adjust paths
+        // Get and adjust paths
+        InitializeReferences(); 
 
         valueHandler.canBeHit = false;
 
-        InitializePaths(); // Get references
+        // Get references
+        InitializePaths(); 
     }
 
-    private void InitializePaths() // Get and adjust paths
+    private void InitializePaths()
     {
         pathNumber = 0;
 
@@ -60,7 +69,7 @@ public abstract class AiBase : MonoBehaviour
         }
     }
 
-    private void InitializeReferences() // Get references
+    private void InitializeReferences()
     {
         ship = GetComponentInChildren<Collider2D>().gameObject;
         player = GameObject.FindGameObjectWithTag("Player");
