@@ -6,11 +6,10 @@ public class GameObjectPublicValueHandler : MonoBehaviour
     public bool canBeHit = false;
     public int health = 1;
     public int scoreValue = 1;
+    public bool invincible = false;
 
     [HideInInspector]
     public GameObject gameController;
-
-    private bool invincible = false;
 
     void Awake()
     {
@@ -51,10 +50,10 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                 {
                     gameController.GetComponent<PlayerController>().AddMultiplier();
                 }
-                if (GetComponent<AiBoss1>())
+                /*if (GetComponent<AiBoss1>())
                 {
                     gameController.GetComponent<PlayerDeath>().EndGameStart(true);
-                }
+                }*/
 
                 gameObject.SetActive(false);
             }

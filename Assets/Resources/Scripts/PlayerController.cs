@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float scoreMultiplier = 1.0f;
     public int lives = 3;
     public int bombs = 3;
+    public float dash = 1f;
+    public float dashRecoverySpeed = 1f;
 
     private float timer = 0;
     private float timerMax = 3f;
@@ -24,6 +26,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        dash += Time.deltaTime * dashRecoverySpeed;
+        if (dash > 1f)
+        {
+            dash = 1f;
+        }
+
         if (scoreMultiplier > 1f)
         {
             timer += Time.deltaTime;

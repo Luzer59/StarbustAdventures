@@ -24,7 +24,6 @@ public class PlayerDeath : MonoBehaviour
 
     void Start()
     {
-        print("derp");
         respawnHealth = player.GetComponent<GameObjectPublicValueHandler>().health;
         respawnPosition = player.transform.position;
     }
@@ -37,7 +36,6 @@ public class PlayerDeath : MonoBehaviour
     IEnumerator RespawnTimer()
     {
         yield return new WaitForSeconds(2f);
-        print(player);
         player.SetActive(true);
         player.GetComponent<GameObjectPublicValueHandler>().health = respawnHealth;
         player.transform.position = respawnPosition;
