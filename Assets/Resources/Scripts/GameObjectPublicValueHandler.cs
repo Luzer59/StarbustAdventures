@@ -10,10 +10,12 @@ public class GameObjectPublicValueHandler : MonoBehaviour
 
     [HideInInspector]
     public GameObject gameController;
+    private SpriteRenderer sr;
 
     void Awake()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController");
+        sr = GetComponentInChildren<SpriteRenderer>();
     }
 
     public void CheckHealth()
@@ -76,7 +78,13 @@ public class GameObjectPublicValueHandler : MonoBehaviour
     IEnumerator InvincibilityTimer()
     {
         invincible = true;
-        yield return new WaitForSeconds(2f);
+        for (int i = 0; i < 10; i++ )
+        {
+            yield return new WaitForSeconds(0.1f);
+            sr.color = new Color(255f, 255f, 255f, 0f);
+            yield return new WaitForSeconds(0.1f);
+            sr.color = new Color(255f, 255f, 255f, 255f);
+        }
         invincible = false;
     }
 }
