@@ -4,18 +4,18 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     public int score = 0;
-    public float scoreMultiplier = 1.0f;
+    public int scoreMultiplier = 1;
     public int lives = 3;
     public int bombs = 3;
     public float dash = 1f;
     public float dashRecoverySpeed = 1f;
 
     private float timer = 0;
-    private float timerMax = 3f;
+    private float timerMax = 5f;
 
     public void AddMultiplier()
     {
-        scoreMultiplier += 0.05f;
+        scoreMultiplier += 1;
         timer = 0f;
     }
 
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
             if (timer > timerMax)
             {
-                scoreMultiplier = 1f;
+                scoreMultiplier = 1;
                 timer = 0;
             }
         }

@@ -216,7 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeHit: 1
   health: 3
-  scoreValue: 100
+  scoreValue: 3000
+  invincible: 0
   gameController: {fileID: 0}
 --- !u!212 &21254728
 SpriteRenderer:
@@ -273,7 +274,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: scoreValue
-      value: 100
+      value: 3000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

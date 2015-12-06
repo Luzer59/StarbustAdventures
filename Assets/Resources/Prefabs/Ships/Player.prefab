@@ -252,7 +252,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -297,7 +297,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1083502e3c553346bf0d8d3de6283fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  dashSpeed: .5
+  dashDuration: .140000001
+  speed: .150000006
   boundary:
     xMin: -4.1500001
     xMax: 4.1500001
@@ -348,8 +350,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHit: 1
-  health: 3
+  health: 1
   scoreValue: 1
+  invincible: 0
   gameController: {fileID: 0}
 --- !u!114 &11463254
 MonoBehaviour:

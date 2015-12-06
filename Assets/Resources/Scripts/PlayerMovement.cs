@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.X))
         {
             if (!dashActive && playerController.dash >= 1f)
             {
