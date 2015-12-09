@@ -19,8 +19,12 @@ public class LevelController : MonoBehaviour
     public Dialogues[] dialogues;
     public Sprite[] pics;
     public GameObject textBox;
+    public Image leftPic;
+    public Image rightPic;
     public Text text;
     public float levelTimeScale = 1f;
+
+    private SpriteRenderer[] picRenderers;
 
     private int currentDialogueSet = 0;
     private bool dialogueActive = false;
@@ -65,6 +69,8 @@ public class LevelController : MonoBehaviour
         for (int i = 0; i < dialogues[currentDialogueSet].text.Length; i++)
         {
             text.text = dialogues[currentDialogueSet].text[i];
+            leftPic.sprite = pics[dialogues[currentDialogueSet].usedPic1[i]];
+            rightPic.sprite = pics[dialogues[currentDialogueSet].usedPic2[i]];
             while (true)
             {
                 
