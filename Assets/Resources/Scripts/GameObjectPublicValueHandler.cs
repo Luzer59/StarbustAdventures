@@ -11,11 +11,14 @@ public class GameObjectPublicValueHandler : MonoBehaviour
     [HideInInspector]
     public GameObject gameController;
     private SpriteRenderer sr;
+    [HideInInspector]
+    public PlayerController pc;
 
     void Awake()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController");
         sr = GetComponentInChildren<SpriteRenderer>();
+        pc = gameController.GetComponent<PlayerController>();
     }
 
     public void CheckHealth()
@@ -31,15 +34,17 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                     GetComponent<DeathExplosionEffect>().Effect();
                     if (tag == "Enemy")
                     {
-                        gameController.GetComponent<PlayerController>().AddScore(scoreValue);
+                        pc.AddScore(scoreValue);
                     }
                 }
 
                 if (tag == "Player")
                 {
-                    gameController.GetComponent<PlayerController>().lives--;
+                    pc.noDeathBonus = false;
 
-                    if (gameController.GetComponent<PlayerController>().lives > 0)
+                    pc.lives--;
+
+                    if (pc.lives > 0)
                     {
                         gameController.GetComponent<PlayerDeath>().PlayerRespawn();
                     }
@@ -50,7 +55,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                 }
                 else if (tag == "Enemy")
                 {
-                    gameController.GetComponent<PlayerController>().AddMultiplier();
+                    pc.AddMultiplier();
                 }
                 /*if (GetComponent<AiBoss1>())
                 {

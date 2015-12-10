@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,13 +11,18 @@ public class PlayerController : MonoBehaviour
     public float dash = 1f;
     public float dashRecoverySpeed = 1f;
 
-    private float timer = 0;
-    private float timerMax = 5f;
+    public Image multimeter;
+
+    public float timerSpeed = 1f;
+    public float timer = 0;
+
+    public bool noDeathBonus = true;
+    public bool noDashBonus = true;
 
     public void AddMultiplier()
     {
         scoreMultiplier += 1;
-        timer = 0f;
+        timer = 1f;
     }
 
 	public void AddScore(int scoreValue)
@@ -34,9 +40,11 @@ public class PlayerController : MonoBehaviour
 
         if (scoreMultiplier > 1f)
         {
-            timer += Time.deltaTime;
+            timer -= Time.deltaTime * timerSpeed;
 
-            if (timer > timerMax)
+            multimeter.fillAmount = timer;
+
+            if (timer <= 0f)
             {
                 scoreMultiplier = 1;
                 timer = 0;

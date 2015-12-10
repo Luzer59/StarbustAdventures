@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
                     playerController.dash = 0f;
                     sprite.color = new Color(255f, 255f, 0f);
                     GetComponent<GameObjectPublicValueHandler>().invincible = true;
+                    GetComponent<GameObjectPublicValueHandler>().pc.noDashBonus = false;
                     dashActive = true;
                     dashHorizontal = moveHorizontal;
                     dashVertical = moveVertical;

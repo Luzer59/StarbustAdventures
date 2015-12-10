@@ -23,7 +23,10 @@ public class AiBoss1 : AiBase
 
     void OnDisable()
     {
-        gameController.GetComponent<LevelController>().levelTimeScale = 1f;
+        if (GetComponent<LevelController>())
+        {
+            gameController.GetComponent<LevelController>().levelTimeScale = 1f;
+        }
     }
 
 

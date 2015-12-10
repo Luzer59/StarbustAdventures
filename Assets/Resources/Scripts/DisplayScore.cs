@@ -4,12 +4,13 @@ using UnityEngine.UI;
 
 public class DisplayScore : MonoBehaviour
 {
+    public int levelNumber = 0;
     void Start()
     {
-        if (!PlayerPrefs.HasKey("Score"))
+        if (!PlayerPrefs.HasKey("Level_" + levelNumber + "_score"))
         {
-            PlayerPrefs.SetInt("Score", 0);
+            PlayerPrefs.SetInt("Level_" + levelNumber + "_score", 0);
         }
-        GetComponent<Text>().text = PlayerPrefs.GetInt("Score").ToString();
+        GetComponent<Text>().text = PlayerPrefs.GetInt("Level_" + levelNumber + "_score").ToString();
     }
 }

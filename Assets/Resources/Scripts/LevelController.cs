@@ -12,6 +12,7 @@ public class Dialogues
 
 public class LevelController : MonoBehaviour
 {
+    public int levelNumber = 0;
     public float levelTime = 0;
     public float totalLevelTime = 0;
     public GameObject paaseMenu;

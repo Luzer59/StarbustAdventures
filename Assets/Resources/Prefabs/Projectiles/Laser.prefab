@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 490064}
   - 212: {fileID: 21276554}
+  - 95: {fileID: 9561554}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -67,7 +68,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &158826
 GameObject:
   m_ObjectHideFlags: 1
@@ -188,7 +189,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100360}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: -1.62920685e-07}
-  m_LocalPosition: {x: 0, y: 4.80000019, z: 0}
+  m_LocalPosition: {x: 0, y: 7.30000019, z: 0}
   m_LocalScale: {x: .5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 466322}
@@ -235,9 +236,26 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 5}
+  m_Offset: {x: 0, y: 7.3451519}
   serializedVersion: 2
-  m_Size: {x: .400000006, y: 10}
+  m_Size: {x: .400000006, y: 14.6903038}
+--- !u!95 &9561554
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100360}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46ee313bdf87ebd4286c7104b730d197, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11448362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,6 +285,7 @@ MonoBehaviour:
   scoreValue: 1
   invincible: 0
   gameController: {fileID: 0}
+  pc: {fileID: 0}
 --- !u!114 &11488852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4659,7 +4678,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 58099082b1e4dc046b7c563418bedd58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
@@ -4692,11 +4711,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 7.30000019
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.z

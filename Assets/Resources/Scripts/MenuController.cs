@@ -5,18 +5,28 @@ public class MenuController : MonoBehaviour
 {
     [SerializeField]
     private int returnScene = -1;
+    private LevelController lc;
+    private PlayerController pc;
+
+    void Awake()
+    {
+        lc = GetComponent<LevelController>();
+        pc = GetComponent<PlayerController>();
+    }
 
     public void ChangeLevel(int index)
     {
-        if (GetComponent<PlayerController>())
+        if (pc)
         {
-            if (!PlayerPrefs.HasKey("Score"))
+            // bonuses here!
+
+            if (!PlayerPrefs.HasKey("Level_" + lc.levelNumber + "_score"))
             {
-                PlayerPrefs.SetInt("Score", 0);
+                PlayerPrefs.SetInt("Level_" + lc.levelNumber + "_score", 0);
             }
-            if (GetComponent<PlayerController>().score > PlayerPrefs.GetInt("Score"))
+            if (pc.score > PlayerPrefs.GetInt("Level_" + lc.levelNumber + "_score"))
             {
-                PlayerPrefs.SetInt("Score", GetComponent<PlayerController>().score);
+                PlayerPrefs.SetInt("Level_" + lc.levelNumber + "_score", pc.score);
             }
         }
 
@@ -32,7 +42,7 @@ public class MenuController : MonoBehaviour
 
     void Update()
     {
-        if (!GetComponent<PlayerController>())
+        if (!pc)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
