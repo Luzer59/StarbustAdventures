@@ -6304,7 +6304,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: lives
-      value: 3
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: levelNumber

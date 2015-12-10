@@ -55,7 +55,6 @@ public class ProjectileBasic : MonoBehaviour
 
     void ReturnToPool()
     {
-        col.enabled = false;
         transform.SetParent(GetComponent<PoolIndex>().container);
         transform.localPosition = poolManager.gameObject.transform.position;
         gameObject.SetActive(false);
