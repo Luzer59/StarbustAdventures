@@ -4,22 +4,35 @@ using System.Collections;
 
 public class AiNormal : AiBase
 {
+    public void ManualActivation()
+    {
+        PathStart();
+    }
+
+    void PathStart()
+    {
+        valueHandler.canBeHit = true;
+        if (paths.Length == 1)
+        {
+            iTween.MoveTo(gameObject, iTween.Hash("path", paths[pathNumber].path, "movetopath", false, "speed", paths[pathNumber].speed, "easetype", paths[pathNumber].easeType, "oncomplete", "PathEnd", "oncompletetarget", gameObject));
+        }
+        else
+        {
+            iTween.MoveTo(gameObject, iTween.Hash("path", paths[pathNumber].path, "movetopath", false, "speed", paths[pathNumber].speed, "easetype", paths[pathNumber].easeType, "oncomplete", "NextPath", "oncompletetarget", gameObject));
+        }
+        if (paths[pathNumber].aim) // ducktaped bug
+        {
+            ship.transform.Rotate(new Vector3(0f, 90f, 90f));
+        }
+    }
+
     void Update()
     {
-        if (gameController.GetComponent<LevelController>().levelTime >= startTime && valueHandler.canBeHit == false) // first path start
+        if (startTime >= 0f)
         {
-            valueHandler.canBeHit = true;
-            if (paths.Length == 1)
+            if (gameController.GetComponent<LevelController>().levelTime >= startTime && valueHandler.canBeHit == false) // first path start
             {
-                iTween.MoveTo(gameObject, iTween.Hash("path", paths[pathNumber].path, "movetopath", false, "speed", paths[pathNumber].speed, "easetype", paths[pathNumber].easeType, "oncomplete", "PathEnd", "oncompletetarget", gameObject));
-            }
-            else
-            {
-                iTween.MoveTo(gameObject, iTween.Hash("path", paths[pathNumber].path, "movetopath", false, "speed", paths[pathNumber].speed, "easetype", paths[pathNumber].easeType, "oncomplete", "NextPath", "oncompletetarget", gameObject));
-            }
-            if (paths[pathNumber].aim) // ducktaped bug
-            {
-                ship.transform.Rotate(new Vector3(0f, 90f, 90f));
+                PathStart();
             }
         }
 

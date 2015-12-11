@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa271a636e234448b84b10d01272bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 1
+  levelNumber: 2
   levelTime: 0
   totalLevelTime: 0
   paaseMenu: {fileID: 143192}
@@ -1057,13 +1057,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   scoreMultiplier: 1
-  lives: 1
+  lives: 99
   bombs: 3
   dash: 1
   dashRecoverySpeed: .5
   multimeter: {fileID: 11423194}
   timerSpeed: 1
   timer: 0
+  noDeathBonus: 1
+  noDashBonus: 1
 --- !u!114 &11450206
 MonoBehaviour:
   m_ObjectHideFlags: 1

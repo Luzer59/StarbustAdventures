@@ -10,6 +10,14 @@ public class Dialogues
     public int[] usedPic2;
 }
 
+[System.Serializable]
+public class ManualDialogues
+{
+    public string[] text;
+    public int[] usedPic1;
+    public int[] usedPic2;
+}
+
 public class LevelController : MonoBehaviour
 {
     public int levelNumber = 0;
@@ -18,6 +26,7 @@ public class LevelController : MonoBehaviour
     public GameObject paaseMenu;
     public float[] dialogueStartTimes;
     public Dialogues[] dialogues;
+    public ManualDialogues[] manualDialogues;
     public Sprite[] pics;
     public GameObject textBox;
     public Image leftPic;
@@ -62,6 +71,11 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    public void ManualActivation(int index)
+    {
+        StartCoroutine(ManualDialogueTimer(index));
+    }
+
     IEnumerator DialogueTimer()
     {
         levelTimeScale = 0f;
@@ -87,5 +101,31 @@ public class LevelController : MonoBehaviour
         dialogueActive = false;
         currentDialogueSet++;
         levelTimeScale = 1f;
+    }
+    IEnumerator ManualDialogueTimer(int index)
+    {
+        levelTimeScale = 0f;
+        textBox.SetActive(true);
+        print(manualDialogues[index].text.Length);
+        for (int i = 0; i < manualDialogues[index].text.Length; i++)
+        {
+            text.text = manualDialogues[index].text[i];
+            leftPic.sprite = pics[manualDialogues[index].usedPic1[i]];
+            rightPic.sprite = pics[manualDialogues[index].usedPic2[i]];
+            while (true)
+            {
+
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    break;
+                }
+                yield return null;
+            }
+            yield return null;
+        }
+        textBox.SetActive(false);
+        dialogueActive = false;
+        levelTimeScale = 1f;
+        GetComponent<PlayerDeath>().EndGameStart(false);
     }
 }

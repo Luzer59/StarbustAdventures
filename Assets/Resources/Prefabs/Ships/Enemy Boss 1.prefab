@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 484424}
   - 60: {fileID: 6082312}
+  - 114: {fileID: 11470030}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -712,6 +713,17 @@ MonoBehaviour:
     shotsFired: 0
     infShoot: 0
     timer: 0
+--- !u!114 &11470030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c43dc2510c9dd4fae128d8422f1292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11474786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -739,7 +751,9 @@ MonoBehaviour:
   health: 100
   scoreValue: 100000
   invincible: 0
+  partikkelz: []
   gameController: {fileID: 0}
+  pc: {fileID: 0}
 --- !u!198 &19822946
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public bool noDeathBonus = true;
     public bool noDashBonus = true;
 
+    
+
     public void AddMultiplier()
     {
         scoreMultiplier += 1;
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
 	public void AddScore(int scoreValue)
     {
         score += (int)(scoreMultiplier * scoreValue);
+        
     }
 
     void Update()

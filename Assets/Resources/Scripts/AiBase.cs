@@ -39,6 +39,9 @@ public abstract class AiBase : MonoBehaviour
         }
     }
 
+    private int scorePopUpPoolIndex = 1;
+    private GameObject instance;
+
     #endregion
     void Start()
     {

@@ -8,17 +8,24 @@ public class GameObjectPublicValueHandler : MonoBehaviour
     public int scoreValue = 1;
     public bool invincible = false;
 
+    public ParticleSystem[] partikkelz;
+
     [HideInInspector]
     public GameObject gameController;
     private SpriteRenderer sr;
     [HideInInspector]
     public PlayerController pc;
 
+    private GameObject instance;
+    private int scorePopUpPoolIndex = 1;
+    private PoolManager poolManager;
+
     void Awake()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController");
         sr = GetComponentInChildren<SpriteRenderer>();
         pc = gameController.GetComponent<PlayerController>();
+        poolManager = GameObject.FindGameObjectWithTag("PoolController").GetComponent<PoolManager>();
     }
 
     public void CheckHealth()
@@ -35,6 +42,16 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                     if (tag == "Enemy")
                     {
                         pc.AddScore(scoreValue);
+                        for (int i = 0; i < poolManager.effectPoolBuffer[scorePopUpPoolIndex]; i++)
+                        {
+                            if (!poolManager.effectPool[scorePopUpPoolIndex][i].activeInHierarchy)
+                            {
+                                instance = poolManager.effectPool[scorePopUpPoolIndex][i];
+                                break;
+                            }
+                        }
+                        instance.SetActive(true);
+                        instance.GetComponent<ScorePopUp>().Activate(transform.position, scoreValue);
                     }
                 }
 
@@ -50,7 +67,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                     }
                     else
                     {
-                        gameController.GetComponent<PlayerDeath>().EndGameStart(false);
+                        //gameController.GetComponent<PlayerDeath>().EndGameStart(false);
                     }
                 }
                 else if (tag == "Enemy")
@@ -82,6 +99,13 @@ public class GameObjectPublicValueHandler : MonoBehaviour
 
     IEnumerator InvincibilityTimer()
     {
+        if (partikkelz.Length > 0)
+        {
+            for (int i = 0; i < partikkelz.Length; i++)
+            {
+                partikkelz[i].Play();
+            }
+        }
         invincible = true;
         for (int i = 0; i < 10; i++ )
         {
@@ -91,5 +115,12 @@ public class GameObjectPublicValueHandler : MonoBehaviour
             sr.color = new Color(255f, 255f, 255f, 255f);
         }
         invincible = false;
+        if (partikkelz.Length > 0)
+        {
+            for (int i = 0; i < partikkelz.Length; i++)
+            {
+                partikkelz[i].Stop();
+            }
+        }
     }
 }
