@@ -11,6 +11,7 @@ public class AiNormal : AiBase
 
     void PathStart()
     {
+        ship.SetActive(true);
         valueHandler.canBeHit = true;
         if (paths.Length == 1)
         {

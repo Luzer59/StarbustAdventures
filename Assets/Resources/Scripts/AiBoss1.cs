@@ -9,15 +9,19 @@ public class AiBoss1 : AiBase
     //private bool stateActive = false;
     private int state = 0;
 	
-	void Update ()
+	void Update()
     {
-        if (gameController.GetComponent<LevelController>().levelTime >= startTime && valueHandler.canBeHit == false) // first path start
+        if (startTime >= 0f)
         {
-            gameController.GetComponent<LevelController>().levelTimeScale = 0f;
-            iTween.MoveTo(gameObject, iTween.Hash("path", paths[pathNumber].path, "movetopath", false, "speed", paths[pathNumber].speed, "easetype", paths[pathNumber].easeType, "looptype", paths[pathNumber].loopType, "oncomplete", "NextPath", "oncompletetarget", gameObject));
-            valueHandler.canBeHit = true;
-            StartCoroutine(StateTimer(4f));
-            StartCoroutine(BasicShot());
+            if (gameController.GetComponent<LevelController>().levelTime >= startTime && valueHandler.canBeHit == false) // first path start
+            {
+                ship.SetActive(true);
+                gameController.GetComponent<LevelController>().levelTimeScale = 0f;
+                iTween.MoveTo(gameObject, iTween.Hash("path", paths[pathNumber].path, "movetopath", false, "speed", paths[pathNumber].speed, "easetype", paths[pathNumber].easeType, "looptype", paths[pathNumber].loopType, "oncomplete", "NextPath", "oncompletetarget", gameObject));
+                valueHandler.canBeHit = true;
+                StartCoroutine(StateTimer(4f));
+                StartCoroutine(BasicShot());
+            }
         }
 	}
 

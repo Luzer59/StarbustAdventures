@@ -89,7 +89,7 @@ public class ProjectileBasic : MonoBehaviour
         spriteRenderer.color = new Color(255f, 255f, 255f, 1f);
         GetComponentInChildren<ParticleSystem>().Play();
         col.enabled = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(speed);
         col.enabled = false;
         ReturnToPool();
     }
@@ -98,22 +98,25 @@ public class ProjectileBasic : MonoBehaviour
     {
         valueHandler = other.GetComponentInParent<GameObjectPublicValueHandler>();
 
-        if (valueHandler.tag != tag)
+        if (valueHandler)
         {
-            if (valueHandler.canBeHit == true)
+            if (valueHandler.tag != tag)
             {
-                valueHandler.CheckHealth();
-
-                if (weaponType == WeaponType.Projectile)
+                if (valueHandler.canBeHit == true)
                 {
-                    ReturnToPool();
-                }
+                    valueHandler.CheckHealth();
 
-                else if (weaponType == WeaponType.Beam)
-                {
-                    StartCoroutine(MercyTimer());
+                    if (weaponType == WeaponType.Projectile)
+                    {
+                        ReturnToPool();
+                    }
+
+                    else if (weaponType == WeaponType.Beam)
+                    {
+                        StartCoroutine(MercyTimer());
+                    }
                 }
             }
-        }      
+        }
     }
 }

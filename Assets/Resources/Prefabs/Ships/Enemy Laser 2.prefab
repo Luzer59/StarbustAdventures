@@ -44,7 +44,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 489868}
   - 61: {fileID: 6175910}
-  - 114: {fileID: 11441120}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -199,17 +198,9 @@ MonoBehaviour:
   partikkelz: []
   gameController: {fileID: 0}
   pc: {fileID: 0}
---- !u!114 &11441120
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 187054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6c43dc2510c9dd4fae128d8422f1292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  lc: {fileID: 0}
+  dialogueToActivate: 0
+  timePassed: -1
 --- !u!114 &11456752
 MonoBehaviour:
   m_ObjectHideFlags: 1

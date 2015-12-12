@@ -40,6 +40,13 @@ public class LevelController : MonoBehaviour
     private bool dialogueActive = false;
     private bool isPaused = false;
 
+    public void ManualPaaseRemoval()
+    {
+        paaseMenu.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1f;
+    }
+
     void Update()
     {
         levelTime += Time.deltaTime * levelTimeScale;

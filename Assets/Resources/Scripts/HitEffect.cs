@@ -28,6 +28,5 @@ public class HitEffect : MonoBehaviour
 
             yield return new WaitForSeconds(0.05f);
         }
-        StopCoroutine(Effect());
     }
 }

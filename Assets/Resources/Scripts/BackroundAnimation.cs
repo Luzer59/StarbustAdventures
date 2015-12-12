@@ -8,7 +8,7 @@ public class BackroundAnimation : MonoBehaviour
 
 	void Update ()
     {
-        mainTexOffset += mainTexOffsetIncrement;
+        mainTexOffset += mainTexOffsetIncrement * Time.deltaTime;
         GetComponent<MeshRenderer>().material.SetTextureOffset("_MainTex", new Vector2(0f, mainTexOffset));
 	}
 }

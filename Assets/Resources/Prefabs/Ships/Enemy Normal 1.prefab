@@ -125,7 +125,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 447010}
   - 61: {fileID: 6192138}
-  - 114: {fileID: 11441304}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -249,17 +248,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: .870000005, y: .75999999}
---- !u!114 &11441304
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6c43dc2510c9dd4fae128d8422f1292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11443816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,6 +278,9 @@ MonoBehaviour:
   partikkelz: []
   gameController: {fileID: 0}
   pc: {fileID: 0}
+  lc: {fileID: 0}
+  dialogueToActivate: 0
+  timePassed: -1
 --- !u!114 &11462248
 MonoBehaviour:
   m_ObjectHideFlags: 1

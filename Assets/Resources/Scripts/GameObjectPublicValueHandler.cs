@@ -15,6 +15,11 @@ public class GameObjectPublicValueHandler : MonoBehaviour
     private SpriteRenderer sr;
     [HideInInspector]
     public PlayerController pc;
+    [HideInInspector]
+    public LevelController lc;
+
+    public int dialogueToActivate;
+    public float timePassed = -1;
 
     private GameObject instance;
     private int scorePopUpPoolIndex = 1;
@@ -25,6 +30,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
         gameController = GameObject.FindGameObjectWithTag("GameController");
         sr = GetComponentInChildren<SpriteRenderer>();
         pc = gameController.GetComponent<PlayerController>();
+        lc = gameController.GetComponent<LevelController>();
         poolManager = GameObject.FindGameObjectWithTag("PoolController").GetComponent<PoolManager>();
     }
 
@@ -67,7 +73,14 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                     }
                     else
                     {
-                        //gameController.GetComponent<PlayerDeath>().EndGameStart(false);
+                        if (lc.levelTime >= timePassed && timePassed > 0)
+                        {
+                            lc.ManualActivation(dialogueToActivate);
+                        }
+                        else
+                        {
+                            gameController.GetComponent<PlayerDeath>().EndGameStart(false);
+                        }
                     }
                 }
                 else if (tag == "Enemy")

@@ -90,7 +90,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 436508}
   - 60: {fileID: 6035084}
-  - 114: {fileID: 11452902}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -574,17 +573,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPoolIndex: 0
---- !u!114 &11452902
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 132922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6c43dc2510c9dd4fae128d8422f1292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11461206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -603,6 +591,9 @@ MonoBehaviour:
   partikkelz: []
   gameController: {fileID: 0}
   pc: {fileID: 0}
+  lc: {fileID: 0}
+  dialogueToActivate: 0
+  timePassed: -1
 --- !u!114 &11466124
 MonoBehaviour:
   m_ObjectHideFlags: 1

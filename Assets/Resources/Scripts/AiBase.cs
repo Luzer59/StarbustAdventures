@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class AiBase : MonoBehaviour
+public class AiBase : MonoBehaviour
 {
     #region Variables
     [SerializeField]
@@ -52,6 +52,7 @@ public abstract class AiBase : MonoBehaviour
         InitializeReferences(); 
 
         valueHandler.canBeHit = false;
+        ship.SetActive(false);
 
         // Get references
         InitializePaths(); 

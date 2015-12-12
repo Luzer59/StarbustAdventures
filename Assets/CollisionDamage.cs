@@ -5,11 +5,10 @@ public class CollisionDamage : MonoBehaviour
 {
     void OnTriggerEnter2D (Collider2D col)
     {
-        print("Asd");
-        if (col.tag == "Player")
+        if (col.tag == "Enemy")
         {
-            //col.GetComponentInParent<GameObjectPublicValueHandler>().CheckHealth();
-            //GetComponentInParent<GameObjectPublicValueHandler>().CheckHealth();
+            col.GetComponentInParent<GameObjectPublicValueHandler>().CheckHealth();
+            GetComponentInParent<GameObjectPublicValueHandler>().CheckHealth();
         }
     }
 }

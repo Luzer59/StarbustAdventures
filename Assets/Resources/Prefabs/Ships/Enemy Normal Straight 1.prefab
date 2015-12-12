@@ -28,7 +28,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 483340}
   - 61: {fileID: 6155582}
-  - 114: {fileID: 11480156}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -267,6 +266,9 @@ MonoBehaviour:
   partikkelz: []
   gameController: {fileID: 0}
   pc: {fileID: 0}
+  lc: {fileID: 0}
+  dialogueToActivate: 0
+  timePassed: -1
 --- !u!114 &11468188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,17 +307,6 @@ MonoBehaviour:
   shotSpawner: {fileID: 199514, guid: 46ca68e80573ce74498ab26f54f2a015, type: 2}
   useSameShootValues: 0
   shootValues: []
---- !u!114 &11480156
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 176290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6c43dc2510c9dd4fae128d8422f1292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11496826
 MonoBehaviour:
   m_ObjectHideFlags: 1

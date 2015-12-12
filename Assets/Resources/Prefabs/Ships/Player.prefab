@@ -70,6 +70,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 421338}
   - 60: {fileID: 6081056}
+  - 114: {fileID: 11444868}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -352,7 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: .5
   dashDuration: .140000001
-  speed: .150000006
+  speed: .100000001
   boundary:
     xMin: -4.1500001
     xMax: 4.1500001
@@ -387,6 +388,20 @@ MonoBehaviour:
   partikkelz: []
   gameController: {fileID: 0}
   pc: {fileID: 0}
+  lc: {fileID: 0}
+  dialogueToActivate: 0
+  timePassed: 15
+--- !u!114 &11444868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c43dc2510c9dd4fae128d8422f1292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11463254
 MonoBehaviour:
   m_ObjectHideFlags: 1

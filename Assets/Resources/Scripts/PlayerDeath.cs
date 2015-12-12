@@ -62,7 +62,6 @@ public class PlayerDeath : MonoBehaviour
         yield return new WaitForSeconds(1f);
         for (float i = 0f; i <= 1f; i += fadeSpeed * Time.deltaTime)
         {
-            print(i);
             image.color = new Color(1f, 1f, 1f, i);
             yield return null;
         }
