@@ -16,16 +16,18 @@ public class MenuController : MonoBehaviour
 
     public void ChangeLevel(int index)
     {
+        print("change level");
         if (pc)
         {
             // bonuses here!
-
+            print("change level passed");
             if (!PlayerPrefs.HasKey("Level_" + lc.levelNumber + "_score"))
             {
                 PlayerPrefs.SetInt("Level_" + lc.levelNumber + "_score", 0);
             }
             if (pc.score > PlayerPrefs.GetInt("Level_" + lc.levelNumber + "_score"))
             {
+                print("[Level_" + lc.levelNumber + "_score] is set to " + pc.score.ToString());
                 PlayerPrefs.SetInt("Level_" + lc.levelNumber + "_score", pc.score);
             }
         }

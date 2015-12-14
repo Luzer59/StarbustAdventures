@@ -775,7 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa271a636e234448b84b10d01272bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 1
+  levelNumber: 2
   levelTime: 0
   totalLevelTime: 0
   paaseMenu: {fileID: 143192}
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   scoreMultiplier: 1
-  lives: 1
+  lives: 8
   bombs: 3
   dash: 1
   dashRecoverySpeed: .5
@@ -1708,7 +1708,9 @@ MonoBehaviour:
   - {fileID: 166272, guid: 108d02a02dd0dcf4bb1daf4eb29fe51b, type: 2}
   - {fileID: 171838, guid: afa409ea8d79dbf43a4d0adf1ea24621, type: 2}
   - {fileID: 146252, guid: 5ee368b627c3de84894184a50a4e42c7, type: 2}
-  projectilePoolBuffer: c80000006400000032000000
+  - {fileID: 100742, guid: 1885bd0288ced2d499724bcb100f26ee, type: 2}
+  - {fileID: 184310, guid: a3159b393ee9e0346ab39050a3aa293a, type: 2}
+  projectilePoolBuffer: c800000064000000320000000a0000000a000000
   pooledEffects:
   - {fileID: 149312, guid: 62d0672a82a26d3428842b91945648e4, type: 2}
   - {fileID: 118468, guid: 79ddfb85e2fde904f836334c2372dce5, type: 2}

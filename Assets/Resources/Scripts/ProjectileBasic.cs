@@ -3,7 +3,7 @@ using System.Collections;
 
 enum WeaponType
 {
-    Projectile, Beam
+    Projectile, Beam, Quickbeam
 }
 
 public class ProjectileBasic : MonoBehaviour
@@ -42,6 +42,11 @@ public class ProjectileBasic : MonoBehaviour
         {
             transform.SetParent(shootPosition, true);
             StartCoroutine(BeamController());
+        }
+        else if (weaponType == WeaponType.Quickbeam)
+        {
+            transform.SetParent(shootPosition, true);
+            StartCoroutine(QuickbeamController());
         }
     }
 
@@ -87,6 +92,15 @@ public class ProjectileBasic : MonoBehaviour
         spriteRenderer.color = new Color(255f, 255f, 255f, 0.3f);
         yield return new WaitForSeconds(0.2f);
         spriteRenderer.color = new Color(255f, 255f, 255f, 1f);
+        GetComponentInChildren<ParticleSystem>().Play();
+        col.enabled = true;
+        yield return new WaitForSeconds(speed);
+        col.enabled = false;
+        ReturnToPool();
+    }
+
+    IEnumerator QuickbeamController()
+    {
         GetComponentInChildren<ParticleSystem>().Play();
         col.enabled = true;
         yield return new WaitForSeconds(speed);

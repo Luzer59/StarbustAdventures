@@ -87,10 +87,10 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                 {
                     pc.AddMultiplier();
                 }
-                /*if (GetComponent<AiBoss1>())
+                if (GetComponent<AiBoss1>() || GetComponent<AiBoss2>())
                 {
                     gameController.GetComponent<PlayerDeath>().EndGameStart(true);
-                }*/
+                }
 
                 gameObject.SetActive(false);
             }

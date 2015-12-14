@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHit: 1
-  health: 100
+  health: 300
   scoreValue: 100000
   invincible: 0
   partikkelz: []
@@ -10590,6 +10590,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: scoreValue
       value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: health
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

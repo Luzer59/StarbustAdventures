@@ -59,12 +59,12 @@ public class PlayerMovement : MonoBehaviour
         if (!dashActive)
         {
             movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
-            transform.Translate(movement * speed);
+            transform.Translate(movement * speed * Time.timeScale);
         }
         else
         {
             movement = new Vector3(dashHorizontal, dashVertical, 0.0f);
-            transform.Translate(movement * dashSpeed);
+            transform.Translate(movement * dashSpeed * Time.timeScale);
             dashTimer += Time.deltaTime;
             if (dashTimer >= dashDuration)
             {

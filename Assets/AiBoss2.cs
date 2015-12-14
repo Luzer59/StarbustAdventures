@@ -106,8 +106,8 @@ public class AiBoss2 : AiBase
     }
     void Sweep2()
     {
-        CreateSpawner(0, 3, ShotType.Normal);
-        iTween.MoveTo(gameObject, iTween.Hash("path", paths[2].path, "movetopath", false, "speed", paths[2].speed, "easetype", paths[2].easeType, "looptype", paths[2].loopType, "oncomplete", "Sweep3", "oncompletetarget", gameObject));
+        CreateSpawner(0, 4, ShotType.Normal);
+        iTween.MoveTo(gameObject, iTween.Hash("path", paths[2].path, "movetopath", true, "speed", paths[2].speed, "easetype", paths[2].easeType, "looptype", paths[2].loopType, "oncomplete", "Sweep3", "oncompletetarget", gameObject));
     }
     void Sweep3()
     {
@@ -163,7 +163,7 @@ public class AiBoss2 : AiBase
         for (int i = 8; i > -1; i--)
         {
             CreateSpawner(i, 2, ShotType.Aim);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
         }
         yield return new WaitForSeconds(3f);
         StateMachine();
