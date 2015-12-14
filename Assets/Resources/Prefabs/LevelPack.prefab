@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &131390
 GameObject:
   m_ObjectHideFlags: 1
@@ -806,7 +806,7 @@ MonoBehaviour:
     usedPic1: 00000000
     usedPic2: 01000000
   pics:
-  - {fileID: 21300000, guid: 5a453961ce525254a82354e360ccc03a, type: 3}
+  - {fileID: 21300000, guid: 2d0cb767cd123e145bd4ad8ce23216e6, type: 3}
   - {fileID: 21300000, guid: 872812608157a254e8959da8934021fb, type: 3}
   - {fileID: 21300000, guid: 872812608157a254e8959da8934021fb, type: 3}
   textBox: {fileID: 129498}
@@ -2042,7 +2042,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 135.600006, y: 164.100006}
+  m_AnchoredPosition: {x: 135.600006, y: 174}
   m_SizeDelta: {x: 169, y: 272.899994}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22427118
@@ -2317,7 +2317,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -135.600006, y: 164.100006}
+  m_AnchoredPosition: {x: -135.600006, y: 174}
   m_SizeDelta: {x: 169, y: 272.899994}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22472996
