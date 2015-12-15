@@ -18,6 +18,14 @@ public class MenuController : MonoBehaviour
 
     public void ChangeLevel(int index)
     {
+        if (index == 2 || index == 4)
+        {
+            GameObject ac = GameObject.Find("AudioController");
+            if (ac)
+            {
+                Destroy(ac);
+            }
+        }
         print("change level");
         if (pc)
         {
@@ -48,6 +56,7 @@ public class MenuController : MonoBehaviour
     {
         if (!pc)
         {
+            AudioSource ac = GetComponent<AudioSource>();
             if (anyKeyQuit)
             {
                 if (Input.anyKeyDown)
@@ -59,6 +68,10 @@ public class MenuController : MonoBehaviour
                     else
                     {
                         ChangeLevel(returnScene);
+                    }
+                    if (ac)
+                    {
+                        ac.Play();
                     }
                 }
             }
@@ -73,6 +86,10 @@ public class MenuController : MonoBehaviour
                     else
                     {
                         ChangeLevel(returnScene);
+                    }
+                    if (ac)
+                    {
+                        ac.Play();
                     }
                 }
             }
