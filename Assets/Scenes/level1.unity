@@ -3789,6 +3789,45 @@ Prefab:
       propertyPath: lives
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].text.Array.data[0]
+      value: 'Bunny: All right, I got one in my sights.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].text.Array.data[1]
+      value: 'Bunny: Sergeant Scarbock is the big dog around this star cluster.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].text.Array.data[2]
+      value: 'Bunny: Destroying his flag  ship should have a significant impact on
+        their local influence.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].text.Array.data[3]
+      value: 'Tiffy: Leave it to me.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].text.Array.data[4]
+      value: 'Bunny: Be careful.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[1].text.Array.data[0]
+      value: 'Sgt Scarbock: What''s this? An unidentified ship? Take him down!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[1].text.Array.data[1]
+      value: "Tiffy: No use. Your cohorts have been taken down \xAD now it's your
+        turn."
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[1].text.Array.data[2]
+      value: 'Sgt Scarbock: An intruder? Very well. I shall take care of you myself,
+        lapdog!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogueStartTimes.Array.data[1]
+      value: 129
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
   m_IsPrefabParent: 0
