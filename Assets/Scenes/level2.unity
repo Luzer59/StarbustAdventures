@@ -399,6 +399,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21268220, guid: 52a0adfffb98aba41aa22188eccdbaea, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: abd64ff4df433e640ba49e653591bb83,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52a0adfffb98aba41aa22188eccdbaea, type: 2}
   m_IsPrefabParent: 0
@@ -6759,6 +6764,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: b271f6376354b8b4ca153a73ae5a727d,
         type: 3}
+    - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: bombs
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: lives
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
   m_IsPrefabParent: 0
@@ -6931,6 +6944,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21268220, guid: 52a0adfffb98aba41aa22188eccdbaea, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c862e4c387bb1d34faea87de831a6738,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52a0adfffb98aba41aa22188eccdbaea, type: 2}
   m_IsPrefabParent: 0
@@ -13002,6 +13020,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11434664, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
+      propertyPath: partikkelz.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 443152, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13041,6 +13063,10 @@ Prefab:
     - target: {fileID: 11405240, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
       propertyPath: dashDuration
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434664, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
+      propertyPath: timePassed
+      value: 157
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
