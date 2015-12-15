@@ -876,6 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   returnScene: 1
+  anyKeyQuit: 1
 --- !u!4 &1084378979
 Transform:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class AiBoss2 : AiBase
                 gameController.GetComponent<LevelController>().levelTimeScale = 0f;
                 iTween.MoveTo(gameObject, iTween.Hash("path", paths[pathNumber].path, "movetopath", false, "speed", paths[pathNumber].speed, "easetype", paths[pathNumber].easeType, "looptype", paths[pathNumber].loopType, "oncomplete", "PathEnd", "oncompletetarget", gameObject));
                 valueHandler.canBeHit = true;
-                StartCoroutine(StateTimer(1f));
+                //StartCoroutine(StateTimer(1f));
             }
         }
     }
@@ -33,6 +33,7 @@ public class AiBoss2 : AiBase
     protected override void PathEnd()
     {
         // deactivation override
+        StateMachine();
     }
 
     /* 
@@ -46,15 +47,17 @@ public class AiBoss2 : AiBase
 
     void StateMachine()
     {
-        //int random = Random.Range(0, 3);
+        int random = Random.Range(0, 4);
 
         //Debug.Log(random);
+
+        state = random;
 
         switch (state)
         {
             case 0:
                 // Sweep mode
-                Sweep1();
+                StartCoroutine(SweepTimer(1f));
                 break;
 
             case 1:
@@ -75,17 +78,17 @@ public class AiBoss2 : AiBase
             default:
                 break;
         }
-        state++;
+        /*state++;
         if (state > 3)
         {
             state = 0;
-        }
+        }*/
     }
 
-    IEnumerator StateTimer(float delay)
+    IEnumerator SweepTimer(float delay)
     {
         yield return new WaitForSeconds(delay);
-        StateMachine();
+        Sweep1();
     }
 
     /*IEnumerator BasicShot()
@@ -127,7 +130,7 @@ public class AiBoss2 : AiBase
             CreateSpawner(7, 2, ShotType.Aim);
             yield return new WaitForSeconds(2f);
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.5f);
         StateMachine();
     }
 
@@ -154,7 +157,7 @@ public class AiBoss2 : AiBase
                 CreateSpawner(i, 3, ShotType.Normal);
             }
         }
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(6.5f);
         StateMachine();
     }
 
@@ -162,10 +165,10 @@ public class AiBoss2 : AiBase
     {
         for (int i = 8; i > -1; i--)
         {
-            CreateSpawner(i, 2, ShotType.Aim);
+            CreateSpawner(i, 5, ShotType.Aim);
             yield return new WaitForSeconds(1f);
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         StateMachine();
     }
 }

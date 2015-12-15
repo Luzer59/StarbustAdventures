@@ -5,6 +5,8 @@ public class MenuController : MonoBehaviour
 {
     [SerializeField]
     private int returnScene = -1;
+    [SerializeField]
+    private bool anyKeyQuit = false;
     private LevelController lc;
     private PlayerController pc;
 
@@ -46,15 +48,32 @@ public class MenuController : MonoBehaviour
     {
         if (!pc)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (anyKeyQuit)
             {
-                if (returnScene == -1)
+                if (Input.anyKeyDown)
                 {
-                    Application.Quit();
+                    if (returnScene == -1)
+                    {
+                        Application.Quit();
+                    }
+                    else
+                    {
+                        ChangeLevel(returnScene);
+                    }
                 }
-                else
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    ChangeLevel(returnScene);
+                    if (returnScene == -1)
+                    {
+                        Application.Quit();
+                    }
+                    else
+                    {
+                        ChangeLevel(returnScene);
+                    }
                 }
             }
         }

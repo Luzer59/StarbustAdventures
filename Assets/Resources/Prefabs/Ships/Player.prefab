@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashSpeed: .5
-  dashDuration: .140000001
+  dashDuration: .0700000003
   speed: .100000001
   boundary:
     xMin: -4.1500001
@@ -3748,6 +3748,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: health
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dashDuration
+      value: .0700000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

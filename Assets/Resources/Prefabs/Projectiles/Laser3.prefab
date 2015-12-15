@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350bf6da870e14e4f93748d3c24c2b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5.69999981
+  speed: 2.29999995
   weaponType: 2
 --- !u!114 &11493238
 MonoBehaviour:
@@ -4694,7 +4694,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: speed
-      value: 5.69999981
+      value: 2.29999995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
