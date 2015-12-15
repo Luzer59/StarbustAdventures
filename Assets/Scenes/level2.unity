@@ -6508,7 +6508,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogues.Array.data[0].text.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogues.Array.data[1].usedPic1.Array.size
@@ -6517,6 +6517,14 @@ Prefab:
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogues.Array.data[1].usedPic2.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].usedPic1.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].usedPic2.Array.size
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 401598, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: m_LocalPosition.x
@@ -6588,11 +6596,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogues.Array.data[0].text.Array.data[5]
-      value: 'Bunny: No worries! You can blast straight out their way with your dash.'
+      value: 'Bunny: Watch out for lasers, they will do significant damage to your
+        ship.'
       objectReference: {fileID: 0}
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogues.Array.data[0].text.Array.data[4]
-      value: 'Tiffy: That could be a problem.'
+      value: 'Bunny: Her ship is heavily guarded.'
       objectReference: {fileID: 0}
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogues.Array.data[0].text.Array.data[3]
@@ -6605,6 +6614,26 @@ Prefab:
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogues.Array.data[0].text.Array.data[1]
       value: 'Bunny: She makes sure that there is no resistance to the new regulations.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].text.Array.data[6]
+      value: 'Tiffy: That could be a problem.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].usedPic2.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].usedPic2.Array.data[6]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].text.Array.data[7]
+      value: 'Bunny: No worries! You can blast straight through them with your dash.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].usedPic2.Array.data[7]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
