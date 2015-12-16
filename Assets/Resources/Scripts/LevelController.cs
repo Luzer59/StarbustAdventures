@@ -43,6 +43,11 @@ public class LevelController : MonoBehaviour
     private AudioSource ac;
     public AudioClip paaseSwitchClip;
 
+    void Awake()
+    {
+        ac = GetComponent<AudioSource>();
+    }
+
     public void ManualPaaseRemoval()
     {
         paaseMenu.SetActive(false);
