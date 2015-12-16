@@ -1,15 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StartMovie : MonoBehaviour {
+public class StartMovie : MonoBehaviour
+{
+    private MenuController mc;
+    private MovieTexture movTex;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void Awake()
+    {
+        mc = GetComponent<MenuController>();
+    }
+
+    void Start()
+    {
+        movTex = (MovieTexture)GetComponent<MeshRenderer>().material.mainTexture;
+        movTex.Play();
+    }
+
+    void Update()
+    {
+        if (!movTex.isPlaying)
+        {
+            mc.ChangeLevel(0);
+        }
+    }
 }

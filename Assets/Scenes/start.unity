@@ -96,6 +96,8 @@ GameObject:
   - 33: {fileID: 1837880091}
   - 64: {fileID: 1837880090}
   - 23: {fileID: 1837880089}
+  - 114: {fileID: 1837880093}
+  - 114: {fileID: 1837880094}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -152,12 +154,36 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837880088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.241715342, y: .23812604, z: -9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: .000102830469, y: -.707106829, z: .707106829, w: -.000102829312}
+  m_LocalPosition: {x: 0, y: 0, z: -9}
+  m_LocalScale: {x: 1.77999997, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1837880093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837880088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29dbd9694b2822143bf05f135561b213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1837880094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837880088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9b18295d8ee2748a3f939607b9bbc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  returnScene: 0
+  anyKeyQuit: 1
 --- !u!1 &1932866724
 GameObject:
   m_ObjectHideFlags: 0
