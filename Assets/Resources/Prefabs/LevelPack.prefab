@@ -1739,11 +1739,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tex: {fileID: 119840}
   loseSprite:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 9a4b50c55a67a9a40916a5688fb045d3, type: 3}
+  - {fileID: 21300000, guid: 2b45f9f116a2068439aaebbc37f13bc1, type: 3}
   winSprite:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 61fdd81896dff254dbb9f6feb8d8b5b2, type: 3}
+  - {fileID: 21300000, guid: 3782e2413825a3b4ba1a54faea4d73b8, type: 3}
   fadeSpeed: .5
   noDashObj: {fileID: 145602}
   noDeathObj: {fileID: 164808}

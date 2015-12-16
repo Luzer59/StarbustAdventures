@@ -36,7 +36,14 @@ public class GameObjectPublicValueHandler : MonoBehaviour
         pc = gameController.GetComponent<PlayerController>();
         lc = gameController.GetComponent<LevelController>();
         poolManager = GameObject.FindGameObjectWithTag("PoolController").GetComponent<PoolManager>();
-        ac = GetComponent<AudioSource>();
+
+        ac = gameObject.AddComponent<AudioSource>();
+
+
+    //    ac.clip = enemyBoomClip;
+     //   ac.Play();
+
+        //ac = GetComponent<AudioSource>();
     }
 
     public void CheckHealth()
@@ -63,7 +70,16 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                         }
                         instance.SetActive(true);
                         instance.GetComponent<ScorePopUp>().Activate(transform.position, scoreValue);
-                        ac.PlayOneShot(enemyBoomClip);
+                        print(enemyBoomClip);
+
+
+
+                        Audios.AudioManager.Play();
+
+                        //ac.clip = enemyBoomClip;
+                       // ac.Play();
+
+                        print("explosions");
                     }
                 }
 
@@ -88,7 +104,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                             gameController.GetComponent<PlayerDeath>().EndGameStart(false);
                         }
                     }
-                    ac.PlayOneShot(playerBoomClip);
+                    Audios.AudioManager.Play2();
                 }
                 else if (tag == "Enemy")
                 {
