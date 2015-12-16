@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9b18295d8ee2748a3f939607b9bbc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  returnScene: 0
+  returnScene: 8
   anyKeyQuit: 1
 --- !u!1 &1932866724
 GameObject:
