@@ -1976,7 +1976,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- Score big to unlock some extras!'
+  m_Text: "- Scoring over 10'000'000 points in\n  total grants you access to some
+    extras!"
 --- !u!222 &1996823639
 CanvasRenderer:
   m_ObjectHideFlags: 0

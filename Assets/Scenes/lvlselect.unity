@@ -1782,7 +1782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 527d9c63134de7a4f9e5069951c9eeca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockLimit: 5000000
+  lockLimit: 10000000
   unlockedSprite: {fileID: 21300000, guid: 9bbb94038bcc8b84a93c659dbf8f990d, type: 3}
   extraButton: {fileID: 709574553}
 --- !u!1001 &1829029154

@@ -3759,6 +3759,10 @@ Prefab:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: manualDialogues.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogueStartTimes.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -3773,6 +3777,18 @@ Prefab:
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogues.Array.data[2].usedPic2.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: manualDialogues.Array.data[0].text.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: manualDialogues.Array.data[0].usedPic1.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: manualDialogues.Array.data[0].usedPic2.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 401598, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3859,6 +3875,23 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: c82315892c7690d46a3d706a290c05e3,
         type: 3}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: manualDialogues.Array.data[0].text.Array.data[0]
+      value: asdasdasdsad
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: manualDialogues.Array.data[0].usedPic2.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[0].text.Array.data[2]
+      value: 'Bunny: Destroying his flagship should have a significant impact on their
+        local influence.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474626, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
   m_IsPrefabParent: 0
@@ -6753,6 +6786,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: c862e4c387bb1d34faea87de831a6738,
         type: 3}
+    - target: {fileID: 419074, guid: 52a0adfffb98aba41aa22188eccdbaea, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 419074, guid: 52a0adfffb98aba41aa22188eccdbaea, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .600000024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52a0adfffb98aba41aa22188eccdbaea, type: 2}
   m_IsPrefabParent: 0
