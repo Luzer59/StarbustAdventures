@@ -319,7 +319,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 131042}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
@@ -351,9 +351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1083502e3c553346bf0d8d3de6283fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: .5
-  dashDuration: .0700000003
-  speed: .100000001
+  dashSpeed: .550000012
+  dashDuration: .100000001
+  speed: .150000006
   boundary:
     xMin: -4.1500001
     xMax: 4.1500001
@@ -390,7 +390,7 @@ MonoBehaviour:
   pc: {fileID: 0}
   lc: {fileID: 0}
   dialogueToActivate: 0
-  timePassed: 15
+  timePassed: 157
 --- !u!114 &11444868
 MonoBehaviour:
   m_ObjectHideFlags: 1

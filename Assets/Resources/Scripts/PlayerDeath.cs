@@ -7,9 +7,9 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField]
     private GameObject tex;
     [SerializeField]
-    private Sprite loseSprite;
+    private Sprite[] loseSprite;
     [SerializeField]
-    private Sprite winSprite;
+    private Sprite[] winSprite;
 
     public float fadeSpeed = 1f;
     private bool win = false;
@@ -50,14 +50,17 @@ public class PlayerDeath : MonoBehaviour
 
     IEnumerator EndGame()
     {
+        
         Image image = tex.GetComponent<Image>();
         if (win)
         {
-            image.sprite = winSprite;
+            int random = Random.Range(0, winSprite.Length);
+            image.sprite = winSprite[random];
         }
         else
         {
-            image.sprite = loseSprite;
+            int random = Random.Range(0, loseSprite.Length);
+            image.sprite = loseSprite[random];
         }
         yield return new WaitForSeconds(1f);
         for (float i = 0f; i <= 1f; i += fadeSpeed * Time.deltaTime)
