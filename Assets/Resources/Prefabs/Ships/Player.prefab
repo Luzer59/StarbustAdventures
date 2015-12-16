@@ -158,7 +158,7 @@ GameObject:
   - 114: {fileID: 11434664}
   - 114: {fileID: 11463254}
   - 114: {fileID: 11400250}
-  - 114: {fileID: 11424472}
+  - 82: {fileID: 8230076}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -328,6 +328,76 @@ PolygonCollider2D:
       - {x: .335452557, y: -.280956745}
       - {x: -.330756634, y: -.284809828}
       - {x: -.0523865558, y: .244228363}
+--- !u!82 &8230076
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160156}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11400250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -359,17 +429,8 @@ MonoBehaviour:
     xMax: 4.1500001
     yMin: -4.30000019
     yMax: 4.30000019
---- !u!114 &11424472
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4aa5f3277cecc04190f20859b80d77d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  dashStartClip: {fileID: 8300000, guid: c34a23cb17e55214e9d30b3920fbaa82, type: 3}
+  dashEmptyClip: {fileID: 0}
 --- !u!114 &11434664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,7 +451,9 @@ MonoBehaviour:
   pc: {fileID: 0}
   lc: {fileID: 0}
   dialogueToActivate: 0
-  timePassed: 157
+  timePassed: 129
+  playerBoomClip: {fileID: 8300000, guid: 8bb190cf7e821964da8d05d2c8dd0e87, type: 3}
+  enemyBoomClip: {fileID: 8300000, guid: 3dd30a0d1cde41a40b5f87858ad950e9, type: 3}
 --- !u!114 &11444868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,6 +492,7 @@ MonoBehaviour:
   shootPos: {fileID: 113586}
   shotSpawner: {fileID: 199514, guid: 46ca68e80573ce74498ab26f54f2a015, type: 2}
   rateOfFire: .400000006
+  shotClip: {fileID: 0}
 --- !u!198 &19816842
 ParticleSystem:
   m_ObjectHideFlags: 1

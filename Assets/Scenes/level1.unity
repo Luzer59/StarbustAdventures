@@ -3782,6 +3782,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8229400, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0711531a6c257aa4e9fa41fc1cf3275f, type: 3}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: paaseSwitchClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 99047509678600a4db57d66fd81a067e, type: 3}
+    - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dashFullClip
+      value: 
+      objectReference: {fileID: 8300000, guid: adb9aa9517322fa45b2622648dffffe7, type: 3}
+    - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: multiplierEmptyClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d0f5bfd3f0619504193d00ce56da7297, type: 3}
+    - target: {fileID: 8229400, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
   m_IsPrefabParent: 0
@@ -12316,7 +12336,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11434664, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
       propertyPath: health
-      value: 1520
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11405240, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
       propertyPath: dashDuration
@@ -12334,6 +12354,22 @@ Prefab:
       propertyPath: shotType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11405240, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
+      propertyPath: dashStartClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c34a23cb17e55214e9d30b3920fbaa82, type: 3}
+    - target: {fileID: 11488890, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
+      propertyPath: shotClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434664, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
+      propertyPath: playerBoomClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bb190cf7e821964da8d05d2c8dd0e87, type: 3}
+    - target: {fileID: 11434664, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
+      propertyPath: enemyBoomClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3dd30a0d1cde41a40b5f87858ad950e9, type: 3}
     m_RemovedComponents:
     - {fileID: 11424472, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b9e7578c9acb5c241b9652a902d19864, type: 2}

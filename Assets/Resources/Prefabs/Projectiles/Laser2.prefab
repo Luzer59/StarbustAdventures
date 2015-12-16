@@ -363,8 +363,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   weaponType: 1
-  projClip: {fileID: 0}
-  beamClip: {fileID: 0}
+  playerProjClip: {fileID: 0}
+  enemyProjClip: {fileID: 0}
+  beamStartClip: {fileID: 8300000, guid: c014b34967eea0e43adc37126cfb7b16, type: 3}
+  beamShootClip: {fileID: 8300000, guid: 409644f29ce190541ad1b5464d8953e2, type: 3}
 --- !u!114 &11485664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4775,6 +4777,14 @@ Prefab:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: beamStartClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c014b34967eea0e43adc37126cfb7b16, type: 3}
+    - target: {fileID: 0}
+      propertyPath: beamShootClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 409644f29ce190541ad1b5464d8953e2, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100742}
