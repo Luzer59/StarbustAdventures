@@ -88,6 +88,6 @@ public class PlayerDeath : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(3f);
-        GetComponent<MenuController>().ChangeLevel(0);
+        GetComponent<MenuController>().ChangeLevel(6);
     }
 }
