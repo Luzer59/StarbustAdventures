@@ -8918,6 +8918,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8241664, guid: 039e1452dc8d58847b6cfa1fa2f20aaf, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 039e1452dc8d58847b6cfa1fa2f20aaf, type: 2}
   m_IsPrefabParent: 0
