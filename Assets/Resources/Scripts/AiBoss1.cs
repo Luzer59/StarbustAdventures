@@ -25,13 +25,13 @@ public class AiBoss1 : AiBase
         }
 	}
 
-    void OnDisable()
+    /*void OnDisable()
     {
         if (GetComponent<LevelController>())
         {
             gameController.GetComponent<LevelController>().levelTimeScale = 1f;
         }
-    }
+    }*/
 
 
 

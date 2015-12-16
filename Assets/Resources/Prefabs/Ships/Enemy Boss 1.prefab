@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHit: 1
-  health: 300
+  health: 100
   scoreValue: 100000
   invincible: 0
   partikkelz: []
@@ -745,6 +745,8 @@ MonoBehaviour:
   lc: {fileID: 0}
   dialogueToActivate: 0
   timePassed: -1
+  playerBoomClip: {fileID: 0}
+  enemyBoomClip: {fileID: 0}
 --- !u!198 &19822946
 ParticleSystem:
   m_ObjectHideFlags: 1

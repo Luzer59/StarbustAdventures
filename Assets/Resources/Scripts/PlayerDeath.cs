@@ -16,10 +16,17 @@ public class PlayerDeath : MonoBehaviour
     private GameObject player;
     private int respawnHealth;
     private Vector3 respawnPosition;
+    private PlayerController pc;
+    public GameObject noDashObj;
+    public GameObject noDeathObj;
+
+    private LevelController lc;
 
     void Awake()
     {
         player = GameObject.Find("Player");
+        pc = GetComponent<PlayerController>();
+        lc = GetComponent<LevelController>();
     }
 
     void Start()
@@ -54,8 +61,20 @@ public class PlayerDeath : MonoBehaviour
         Image image = tex.GetComponent<Image>();
         if (win)
         {
+            if (pc.noDeathBonus)
+            {
+                noDeathObj.SetActive(true);
+                pc.score += 250000;
+            }
+            if (pc.noDashBonus)
+            {
+
+                noDashObj.SetActive(true);
+                pc.score += 250000;
+            }
             int random = Random.Range(0, winSprite.Length);
             image.sprite = winSprite[random];
+            yield return new WaitForSeconds(1f);
         }
         else
         {

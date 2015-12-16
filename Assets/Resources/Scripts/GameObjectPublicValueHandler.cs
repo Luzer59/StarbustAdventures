@@ -96,6 +96,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                 }
                 if (GetComponent<AiBoss1>() || GetComponent<AiBoss2>())
                 {
+                    gameController.GetComponent<LevelController>().levelTimeScale = 1f;
                     gameController.GetComponent<PlayerDeath>().EndGameStart(true);
                 }
 
