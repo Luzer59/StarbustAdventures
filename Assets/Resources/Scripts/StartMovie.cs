@@ -21,7 +21,7 @@ public class StartMovie : MonoBehaviour
     {
         if (!movTex.isPlaying)
         {
-            mc.ChangeLevel(0);
+            mc.ChangeLevel(8);
         }
     }
 }

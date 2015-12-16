@@ -3750,6 +3750,30 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: pics.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogueStartTimes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[2].text.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[2].usedPic1.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[2].usedPic2.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 401598, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3793,7 +3817,7 @@ Prefab:
     - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dashFullClip
       value: 
-      objectReference: {fileID: 8300000, guid: adb9aa9517322fa45b2622648dffffe7, type: 3}
+      objectReference: {fileID: 8300000, guid: e84cb1aa34fbc484c8e171ae7f72873b, type: 3}
     - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: multiplierEmptyClip
       value: 
@@ -3802,6 +3826,39 @@ Prefab:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: timerSpeed
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: levelNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogueStartTimes.Array.data[2]
+      value: 131
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[2].text.Array.data[0]
+      value: 'Sgt Scarbock: No! How can this be? You defeated me!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[2].text.Array.data[1]
+      value: 'Tiffy: And I will defeat many more.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[2].usedPic2.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: dialogues.Array.data[2].usedPic2.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: pics.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: c82315892c7690d46a3d706a290c05e3,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
   m_IsPrefabParent: 0

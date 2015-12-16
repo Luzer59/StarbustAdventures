@@ -6610,11 +6610,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: pics.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogues.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11465392, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: winSprite.Array.size
@@ -6630,7 +6630,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11417378, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dialogueStartTimes.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11493702, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: projectilePoolBuffer.Array.size
@@ -6874,7 +6874,7 @@ Prefab:
     - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: dashFullClip
       value: 
-      objectReference: {fileID: 8300000, guid: adb9aa9517322fa45b2622648dffffe7, type: 3}
+      objectReference: {fileID: 8300000, guid: e84cb1aa34fbc484c8e171ae7f72873b, type: 3}
     - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: multiplierEmptyClip
       value: 
@@ -6886,10 +6886,14 @@ Prefab:
     - target: {fileID: 8229400, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 2d4185343b495ca4fb21e1d7738bf246, type: 3}
+      objectReference: {fileID: 8300000, guid: 0711531a6c257aa4e9fa41fc1cf3275f, type: 3}
     - target: {fileID: 8229400, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
       propertyPath: Loop
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11448166, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
+      propertyPath: timerSpeed
+      value: .200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb14704dedbc7254d8a2645b51663d67, type: 2}
