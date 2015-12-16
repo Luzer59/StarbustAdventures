@@ -40,11 +40,15 @@ public class LevelController : MonoBehaviour
     private bool dialogueActive = false;
     private bool isPaused = false;
 
+    private AudioSource ac;
+    public AudioClip paaseSwitchClip;
+
     public void ManualPaaseRemoval()
     {
         paaseMenu.SetActive(false);
         isPaused = false;
         Time.timeScale = 1f;
+        ac.PlayOneShot(paaseSwitchClip);
     }
 
     void Update()
@@ -59,12 +63,14 @@ public class LevelController : MonoBehaviour
                 paaseMenu.SetActive(true);
                 isPaused = true;
                 Time.timeScale = 0f;
+                ac.PlayOneShot(paaseSwitchClip);
             }
             else
             {
                 paaseMenu.SetActive(false);
                 isPaused = false;
                 Time.timeScale = 1f;
+                ac.PlayOneShot(paaseSwitchClip);
             }
         }
 

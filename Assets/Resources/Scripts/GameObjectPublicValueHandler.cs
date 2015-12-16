@@ -21,9 +21,13 @@ public class GameObjectPublicValueHandler : MonoBehaviour
     public int dialogueToActivate;
     public float timePassed = -1;
 
+    public AudioClip playerBoomClip;
+    public AudioClip enemyBoomClip;
+
     private GameObject instance;
     private int scorePopUpPoolIndex = 1;
     private PoolManager poolManager;
+    private AudioSource ac;
 
     void Awake()
     {
@@ -32,6 +36,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
         pc = gameController.GetComponent<PlayerController>();
         lc = gameController.GetComponent<LevelController>();
         poolManager = GameObject.FindGameObjectWithTag("PoolController").GetComponent<PoolManager>();
+        ac = GetComponent<AudioSource>();
     }
 
     public void CheckHealth()
@@ -58,6 +63,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                         }
                         instance.SetActive(true);
                         instance.GetComponent<ScorePopUp>().Activate(transform.position, scoreValue);
+                        ac.PlayOneShot(enemyBoomClip);
                     }
                 }
 
@@ -82,6 +88,7 @@ public class GameObjectPublicValueHandler : MonoBehaviour
                             gameController.GetComponent<PlayerDeath>().EndGameStart(false);
                         }
                     }
+                    ac.PlayOneShot(playerBoomClip);
                 }
                 else if (tag == "Enemy")
                 {

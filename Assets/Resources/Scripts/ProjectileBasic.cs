@@ -20,12 +20,19 @@ public class ProjectileBasic : MonoBehaviour
     private Vector3 pos;
     private BoxCollider2D col;
 
+    public AudioClip playerProjClip;
+    public AudioClip enemyProjClip;
+    public AudioClip beamStartClip;
+    public AudioClip beamShootClip;
+    private AudioSource ac;
+
     void Awake()
     {
         poolManager = GameObject.FindGameObjectWithTag("PoolController").GetComponent<PoolManager>();
         //poolIndex = GetComponent<PoolIndex>().poolIndex;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         col = GetComponent<BoxCollider2D>();
+        ac = GetComponent<AudioSource>();
         gameObject.SetActive(false);
     }
 
@@ -37,16 +44,26 @@ public class ProjectileBasic : MonoBehaviour
         {
             StartCoroutine(DestroyByTime());
             GetComponent<Rigidbody2D>().velocity = transform.up * speed;
+            if (tag == "Player")
+            {
+                ac.PlayOneShot(playerProjClip);
+            }
+            else
+            {
+                ac.PlayOneShot(enemyProjClip);
+            }
         }
         else if (weaponType == WeaponType.Beam)
         {
             transform.SetParent(shootPosition, true);
             StartCoroutine(BeamController());
+            ac.PlayOneShot(beamStartClip);
         }
         else if (weaponType == WeaponType.Quickbeam)
         {
             transform.SetParent(shootPosition, true);
             StartCoroutine(QuickbeamController());
+            ac.PlayOneShot(beamShootClip);
         }
     }
 
@@ -92,6 +109,7 @@ public class ProjectileBasic : MonoBehaviour
         spriteRenderer.color = new Color(255f, 255f, 255f, 0.3f);
         yield return new WaitForSeconds(0.2f);
         spriteRenderer.color = new Color(255f, 255f, 255f, 1f);
+        ac.PlayOneShot(beamShootClip);
         GetComponentInChildren<ParticleSystem>().Play();
         col.enabled = true;
         yield return new WaitForSeconds(speed);

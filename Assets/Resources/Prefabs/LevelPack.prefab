@@ -17,6 +17,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &106490
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22458730}
+  - 222: {fileID: 22229816}
+  - 114: {fileID: 11416842}
+  m_Layer: 5
+  m_Name: Pressspace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &107094
 GameObject:
   m_ObjectHideFlags: 1
@@ -100,6 +117,7 @@ GameObject:
   - 114: {fileID: 11417378}
   - 114: {fileID: 11469450}
   - 114: {fileID: 11465392}
+  - 82: {fileID: 8229400}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -642,6 +660,76 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144390}
   m_Enabled: 1
+--- !u!82 &8229400
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127664}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!92 &9219550
 Behaviour:
   m_ObjectHideFlags: 1
@@ -764,6 +852,38 @@ MonoBehaviour:
   m_Text: 'Score
 
 '
+--- !u!114 &11416842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .595588207, g: .595588207, b: .595588207, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7c5d3e7cdcc92b94bba417ef6946c13e, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: -Press space to advance text-
 --- !u!114 &11417378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -781,25 +901,29 @@ MonoBehaviour:
   paaseMenu: {fileID: 143192}
   dialogueStartTimes:
   - .200000003
-  - 157
+  - 130
+  - 131
   dialogues:
   - text:
-    - 'Bunny: Judge Moss was in a significant role when the new legislation was formed.'
-    - 'Bunny: She makes sure that there is no resistance to the new regulations. She
-      is a key person in the system corruption.'
-    - 'Tiffy: Is there anything about her I should know in particular?'
-    - 'Tiffy: That could be a problem.'
-    - 'Bunny: No worries! You can blast straight out their way with your dash.'
+    - 'Bunny: All right, I got one in my sights.'
+    - 'Bunny: Sergeant Scarbock is the big dog around this star cluster.'
+    - 'Bunny: Destroying his flag  ship should have a significant impact on their
+      local influence.'
+    - 'Tiffy: Leave it to me.'
+    - 'Bunny: Be careful.'
     usedPic1: 0000000000000000000000000000000000000000
     usedPic2: 0100000001000000010000000100000001000000
   - text:
-    - 'Judge Moss: I saw an unfamiliar ship in the monitors. Who are you and what
-      do you want?'
-    - 'Tiffy: Your head on a platter.'
-    - 'Judge Moss: Then I''ll have to disappoint you. If you expected an easy fight,
-      prepare to be proven wrong.'
+    - 'Sgt Scarbock: What''s this? An unidentified ship? Take him down!'
+    - "Tiffy: No use. Your cohorts have been taken down \xAD now it's your turn."
+    - 'Sgt Scarbock: An intruder? Very well. I shall take care of you myself, lapdog!'
     usedPic1: 000000000000000000000000
     usedPic2: 020000000200000002000000
+  - text:
+    - 'Sgt Scarbock: No! How can this be? You defeated me!'
+    - 'Tiffy: And I will defeat many more.'
+    usedPic1: 0000000000000000
+    usedPic2: 0300000003000000
   manualDialogues:
   - text:
     - asdasdasdsad
@@ -808,7 +932,8 @@ MonoBehaviour:
   pics:
   - {fileID: 21300000, guid: 2d0cb767cd123e145bd4ad8ce23216e6, type: 3}
   - {fileID: 21300000, guid: 872812608157a254e8959da8934021fb, type: 3}
-  - {fileID: 21300000, guid: 872812608157a254e8959da8934021fb, type: 3}
+  - {fileID: 21300000, guid: 9609cdf2e362c544589758db4ee45aab, type: 3}
+  - {fileID: 21300000, guid: c82315892c7690d46a3d706a290c05e3, type: 3}
   textBox: {fileID: 129498}
   leftPic: {fileID: 11493236}
   rightPic: {fileID: 11488864}
@@ -1237,6 +1362,8 @@ MonoBehaviour:
   timer: 0
   noDeathBonus: 1
   noDashBonus: 1
+  dashFullClip: {fileID: 0}
+  multiplierEmptyClip: {fileID: 0}
 --- !u!114 &11448744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1328,6 +1455,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11417378}
+        m_MethodName: ManualPaaseRemoval
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1501,8 +1639,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tex: {fileID: 119840}
-  loseSprite: {fileID: 21300000, guid: 1170257a29e7a18498caf08e5009f92c, type: 3}
-  winSprite: {fileID: 21300000, guid: ae69bb19f7e0f1e4e81907271644ac0c, type: 3}
+  loseSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  winSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   fadeSpeed: .5
 --- !u!114 &11469450
 MonoBehaviour:
@@ -1516,6 +1660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   returnScene: 1
+  anyKeyQuit: 0
 --- !u!114 &11471332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1848,6 +1993,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155212}
+--- !u!222 &22229816
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106490}
 --- !u!222 &22233564
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -2117,6 +2268,7 @@ RectTransform:
   - {fileID: 22441844}
   - {fileID: 22466962}
   - {fileID: 22418436}
+  - {fileID: 22458730}
   m_Father: {fileID: 22439518}
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
@@ -2266,6 +2418,23 @@ RectTransform:
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: .699999988, y: .899999976}
   m_SizeDelta: {x: 194.899994, y: 48.7000008}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22458730
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22436444}
+  m_RootOrder: 3
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: -66.8700409}
+  m_SizeDelta: {x: 338.5, y: 63.0999985}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22459388
 RectTransform:

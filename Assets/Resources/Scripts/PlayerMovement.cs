@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public float dashDuration;
     public float speed;
     public Boundary boundary;
+    public AudioClip dashStartClip;
+    public AudioClip dashEmptyClip;
 
     private bool dashActive = false;
     private float dashTimer = 0f;
@@ -22,11 +24,13 @@ public class PlayerMovement : MonoBehaviour
 
     private SpriteRenderer sprite;
     private PlayerController playerController;
+    private AudioSource ac;
 
     void Awake()
     {
         sprite = GetComponentInChildren<SpriteRenderer>();
         playerController = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerController>();
+        ac = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -51,7 +55,12 @@ public class PlayerMovement : MonoBehaviour
                     dashActive = true;
                     dashHorizontal = moveHorizontal;
                     dashVertical = moveVertical;
+                    ac.PlayOneShot(dashStartClip);
                 }
+            }
+            else
+            {
+                ac.PlayOneShot(dashEmptyClip);
             }
         }
 

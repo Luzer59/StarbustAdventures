@@ -19,7 +19,16 @@ public class PlayerController : MonoBehaviour
     public bool noDeathBonus = true;
     public bool noDashBonus = true;
 
-    
+    public AudioClip dashFullClip;
+    public AudioClip multiplierEmptyClip;
+    private AudioSource ac;
+    private float lastDash = 0f;
+    private float lastMulti = 1f;
+
+    void Awake()
+    {
+        ac = GetComponent<AudioSource>();
+    }
 
     public void AddMultiplier()
     {
@@ -38,8 +47,13 @@ public class PlayerController : MonoBehaviour
         dash += Time.deltaTime * dashRecoverySpeed;
         if (dash > 1f)
         {
+            if (lastDash < 1f)
+            {
+                ac.PlayOneShot(dashFullClip);
+            }
             dash = 1f;
         }
+        lastDash = dash;
 
         if (scoreMultiplier > 1f)
         {
@@ -51,7 +65,12 @@ public class PlayerController : MonoBehaviour
             {
                 scoreMultiplier = 1;
                 timer = 0;
+                if (lastMulti > 0f)
+                {
+                    ac.PlayOneShot(multiplierEmptyClip);
+                }
             }
+            lastMulti = timer;
         }
     }
 }

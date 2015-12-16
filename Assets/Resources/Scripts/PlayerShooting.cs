@@ -17,6 +17,15 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField]
     private float rateOfFire = 1f;
 
+    private AudioSource ac;
+    [SerializeField]
+    private AudioClip shotClip;
+
+    void Awake()
+    {
+        ac = GetComponent<AudioSource>();
+    }
+
     void Start()
     {
         poolManager = GameObject.FindGameObjectWithTag("PoolController").GetComponent<PoolManager>();
@@ -41,6 +50,7 @@ public class PlayerShooting : MonoBehaviour
             projectileSpawner.transform.position = projectileSpawner.transform.parent.transform.position;
             projectileSpawner.transform.rotation = projectileSpawner.transform.parent.transform.rotation;
             projectileSpawner.GetComponent<ShotSpawner>().Activate(shotType, projectileIndex, transform);
+            ac.PlayOneShot(shotClip);
         }
         
 	}
