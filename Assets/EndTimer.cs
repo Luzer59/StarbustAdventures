@@ -10,7 +10,7 @@ public class EndTimer : MonoBehaviour
         time -= Time.deltaTime;
         if (time <= 0f)
         {
-            GetComponent<MenuController>().ChangeLevel(0);
+            GetComponent<MenuController>().ChangeLevel(6);
         }
     }
 }
