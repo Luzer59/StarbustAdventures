@@ -756,6 +756,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1925845216}
   - 114: {fileID: 1925845215}
+  - 114: {fileID: 1925845217}
   m_Layer: 5
   m_Name: Menu Controller
   m_TagString: Untagged
@@ -788,6 +789,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1925845217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925845214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9f50b66310a2e45988f2fcf5350c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1932866724
 GameObject:
   m_ObjectHideFlags: 0
